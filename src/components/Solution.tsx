@@ -29,7 +29,7 @@ export const Solution = () => (
         </h2>
         <p className="mt-6 text-lg text-on-light-muted leading-relaxed">
           Trustify Sports provides the compliance infrastructure that football organizations need
-          to meet European AML requirements — without building it themselves. We handle the complexity
+          to meet European AML requirements without building it themselves. We handle the complexity
           so clubs, federations, and governing bodies can stay focused on performance.
         </p>
       </Reveal>
