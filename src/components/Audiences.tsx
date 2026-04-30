@@ -20,7 +20,7 @@ const audiences = [
     eyebrow: "Player Agents",
     title: "For Player Agents",
     body:
-      "Player agents operate in an environment of growing regulatory expectation. Under the new EU AML framework, agents handling significant transaction flows are increasingly treated as obliged entities. Trustify Sports gives agents the compliance infrastructure they need to operate with confidence — and credibility.",
+      "Player agents operate in an environment of growing regulatory expectation. Under the new EU AML framework, agents handling significant transaction flows are increasingly treated as obliged entities. Trustify Sports gives agents the compliance infrastructure they need to operate with confidence and credibility.",
     bullets: [
       "AML policy and procedure setup",
       "Client and counterparty due diligence",
