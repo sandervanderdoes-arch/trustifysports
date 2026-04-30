@@ -24,10 +24,9 @@ export const Hero = () => (
       </Reveal>
 
       <Reveal delay={80}>
-        <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.05] max-w-4xl">
-          Compliance Infrastructure
-          <br />
-          Built for <span className="text-primary italic">Professional Football</span>
+        <h1 className="font-serif whitespace-nowrap leading-[1.05] text-[clamp(1.25rem,4.2vw,3.75rem)]">
+          Compliance Infrastructure Built for{" "}
+          <span className="text-primary italic">Professional Football</span>
         </h1>
       </Reveal>
 
@@ -36,15 +35,6 @@ export const Hero = () => (
           Trustify Sports helps clubs and football organizations navigate European AML
           regulations, so they can focus on what matters most: the game.
         </p>
-      </Reveal>
-
-      <Reveal delay={200}>
-        <div className="mt-6 inline-flex items-start gap-3 px-4 py-3 rounded-md border border-primary/30 bg-primary/5 max-w-2xl">
-          <span className="text-primary mt-0.5">🗓️</span>
-          <p className="text-sm text-muted-foreground leading-relaxed">
-            With <span className="text-foreground font-medium">EU AMLA enforcement beginning in 2029</span>, the window to build compliant infrastructure is open. But not indefinitely.
-          </p>
-        </div>
       </Reveal>
 
       <Reveal delay={240}>
