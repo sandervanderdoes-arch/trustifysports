@@ -61,7 +61,7 @@ export const Hero = () => (
       <Reveal delay={320}>
         <div className="mt-16 pt-8 border-t border-border/60 max-w-2xl">
           <p className="text-sm text-muted-foreground">
-            <span className="text-primary">—</span> Developed in partnership with the football industry, for the football industry. <span className="text-foreground/90">Official partner of Pro Agent.</span>
+            Developed in partnership with the football industry, for the football industry. <span className="text-foreground/90">Official partner of Pro Agent.</span>
           </p>
         </div>
       </Reveal>
