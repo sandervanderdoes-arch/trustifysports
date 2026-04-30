@@ -7,9 +7,11 @@ import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import { Mail, Linkedin } from "lucide-react";
 import { Reveal } from "./Reveal";
+import { supabase } from "@/integrations/supabase/client";
 
 const schema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100),
+  email: z.string().trim().email("Please enter a valid email").max(200),
   organization: z.string().trim().min(1, "Organization is required").max(150),
   message: z.string().trim().min(10, "Please share a few details").max(2000),
 });
@@ -19,11 +21,13 @@ const CONTACT_EMAIL = "sander@trustifysports.com";
 export const Contact = () => {
   const [submitting, setSubmitting] = useState(false);
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const form = new FormData(e.currentTarget);
+    const formEl = e.currentTarget;
+    const form = new FormData(formEl);
     const data = {
       name: String(form.get("name") || ""),
+      email: String(form.get("email") || ""),
       organization: String(form.get("organization") || ""),
       message: String(form.get("message") || ""),
     };
@@ -32,17 +36,43 @@ export const Contact = () => {
       toast.error(parsed.error.errors[0].message);
       return;
     }
+
     setSubmitting(true);
-    const subject = encodeURIComponent(`Trustify Sports — inquiry from ${parsed.data.name}`);
-    const body = encodeURIComponent(
-      `Name: ${parsed.data.name}\nOrganization: ${parsed.data.organization}\n\n${parsed.data.message}`
-    );
-    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
-    setTimeout(() => {
-      toast.success("Opening your email client…");
+    try {
+      const id =
+        typeof crypto !== "undefined" && "randomUUID" in crypto
+          ? crypto.randomUUID()
+          : `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+
+      // Send notification to internal inbox
+      const notify = await supabase.functions.invoke("send-transactional-email", {
+        body: {
+          templateName: "contact-notification",
+          recipientEmail: CONTACT_EMAIL,
+          idempotencyKey: `contact-notify-${id}`,
+          templateData: parsed.data,
+        },
+      });
+      if (notify.error) throw notify.error;
+
+      // Send confirmation back to the sender
+      await supabase.functions.invoke("send-transactional-email", {
+        body: {
+          templateName: "contact-confirmation",
+          recipientEmail: parsed.data.email,
+          idempotencyKey: `contact-confirm-${id}`,
+          templateData: { name: parsed.data.name },
+        },
+      });
+
+      toast.success("Thanks! Your message has been sent.");
+      formEl.reset();
+    } catch (err) {
+      console.error(err);
+      toast.error("Could not send message. Please try again or email us directly.");
+    } finally {
       setSubmitting(false);
-      (e.target as HTMLFormElement).reset();
-    }, 400);
+    }
   };
 
   return (
@@ -67,9 +97,13 @@ export const Contact = () => {
                 <Input id="name" name="name" required maxLength={100} placeholder="Your full name" className="text-white placeholder:text-white/50" />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="organization" className="text-on-light">Organization</Label>
-                <Input id="organization" name="organization" required maxLength={150} placeholder="Club, federation, fund…" className="text-white placeholder:text-white/50" />
+                <Label htmlFor="email" className="text-on-light">Email</Label>
+                <Input id="email" name="email" type="email" required maxLength={200} placeholder="you@example.com" className="text-white placeholder:text-white/50" />
               </div>
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="organization" className="text-on-light">Organization</Label>
+              <Input id="organization" name="organization" required maxLength={150} placeholder="Club, federation, fund…" className="text-white placeholder:text-white/50" />
             </div>
             <div className="space-y-2">
               <Label htmlFor="message" className="text-on-light">Message</Label>
