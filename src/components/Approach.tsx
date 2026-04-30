@@ -35,7 +35,7 @@ export const Approach = () => (
           with clubs, federations, and football insiders. We understand the rhythms of transfer windows,
           the complexity of multi-party transactions, and the pressure organizations are under. That's
           why every part of our solution is designed to fit naturally into how football actually
-          works — not the other way around.
+          works, not the other way around.
         </p>
       </Reveal>
 
