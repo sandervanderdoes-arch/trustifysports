@@ -52,7 +52,7 @@ export const Contact = () => {
           <div className="gold-rule mx-auto mb-6" />
           <h2 className="text-3xl lg:text-5xl leading-tight text-on-light">Let's Talk</h2>
           <p className="mt-5 text-lg text-on-light-muted">
-            Whether you're a club, federation, investor, or potential partner — we'd like to hear from you.
+            Whether you're a club, federation, investor, or potential partner, we'd like to hear from you.
           </p>
         </Reveal>
 
