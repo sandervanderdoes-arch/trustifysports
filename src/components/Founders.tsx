@@ -39,8 +39,7 @@ export const Founders = () => (
                   {f.initials}
                 </div>
                 <div>
-                  <h3 className="font-serif text-xl text-on-light leading-tight">{f.name}</h3>
-                  <p className="text-sm text-on-light-muted mt-1">{f.title}</p>
+                  <h3 className="font-serif text-xl text-on-light leading-tight">{f.name.split(" ")[0]}</h3>
                 </div>
               </div>
               <p className="mt-6 text-sm text-on-light-muted leading-relaxed flex-1">{f.bio}</p>
