@@ -21,6 +21,7 @@ const Index = () => {
       <Approach />
       <Founders />
       <WhyUs />
+      <Timeline />
       <Contact />
       <Footer />
     </main>
