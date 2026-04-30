@@ -4,7 +4,7 @@ import { Reveal } from "./Reveal";
 const founders = [
   {
     initials: "AvW",
-    name: "Alexander van der Does de Willebois",
+    name: "Alexander van der Does",
     title: "Co-Founder & CEO",
     bio: "Alexander brings over 10 years of commercial experience from global brands including Red Bull and Heineken. He specializes in business development, partnerships, and building ventures from the ground up. Based in Los Angeles, he bridges European football expertise with a global commercial network.",
     linkedin: "https://www.linkedin.com/in/alexander-van-der-does-de-willebois-5316447b/",
@@ -13,7 +13,7 @@ const founders = [
     initials: "PT",
     name: "Philip",
     title: "Co-Founder & CFO",
-    bio: "Philip is a compliance and forensic expert with a background at EY, where he specialized in financial crime, AML frameworks, and regulatory investigations. He brings deep technical expertise in the exact regulatory landscape that Trustify Sports was built to navigate.",
+    bio: "Philip is a compliance and forensic expert with a background at a Big 4 consulting firm, where he specialized in financial crime, AML frameworks, and regulatory investigations. He brings deep technical expertise in the exact regulatory landscape that Trustify Sports was built to navigate.",
     linkedin: "https://www.linkedin.com/",
   },
 ];
