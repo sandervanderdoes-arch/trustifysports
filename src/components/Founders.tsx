@@ -7,7 +7,7 @@ const founders = [
     name: "Alexander van der Does de Willebois",
     title: "Co-Founder & CEO",
     bio: "Alexander brings over 10 years of commercial experience from global brands including Red Bull and Heineken. He specializes in business development, partnerships, and building ventures from the ground up. Based in Los Angeles, he bridges European football expertise with a global commercial network.",
-    linkedin: "https://www.linkedin.com/",
+    linkedin: "https://www.linkedin.com/in/alexander-van-der-does-de-willebois-5316447b/",
   },
   {
     initials: "PT",
