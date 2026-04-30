@@ -14,7 +14,7 @@ const steps = [
   {
     n: "03",
     title: "Operate",
-    body: "We run alongside you — monitoring, updating, and reporting as regulations evolve.",
+    body: "We run alongside you. Monitoring, updating, and reporting as regulations evolve.",
   },
 ];
 
