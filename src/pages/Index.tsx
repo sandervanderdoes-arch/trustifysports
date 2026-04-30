@@ -19,6 +19,7 @@ const Index = () => {
       <Partners />
       <Problem />
       <Solution />
+      <Audiences />
       <Approach />
       <Founders />
       <WhyUs />
