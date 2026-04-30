@@ -7,7 +7,7 @@ const audiences = [
     eyebrow: "Football Clubs",
     title: "For Football Clubs",
     body:
-      "Clubs sit at the center of the most complex financial flows in football — transfers, agent fees, sponsorship structures, and ownership arrangements. Trustify Sports maps your full AML exposure and builds the internal workflows your organization needs to stay compliant as European regulatory scrutiny intensifies ahead of AMLA 2029.",
+      "Clubs sit at the center of the most complex financial flows in football: transfers, agent fees, sponsorship structures, and ownership arrangements. Trustify Sports maps your full AML exposure and builds the internal workflows your organization needs to stay compliant as European regulatory scrutiny intensifies ahead of AMLA 2029.",
     bullets: [
       "Transfer and payment due diligence",
       "Ownership and UBO screening",
