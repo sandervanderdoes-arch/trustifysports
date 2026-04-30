@@ -1,4 +1,4 @@
-import { TrendingUp, Target, Handshake } from "lucide-react";
+import { TrendingUp, Target, Handshake, Award } from "lucide-react";
 import { Reveal } from "./Reveal";
 
 const reasons = [
@@ -16,6 +16,11 @@ const reasons = [
     icon: Handshake,
     title: "Partnership-First Model",
     body: "We grow with our clients. Our business model is built on long-term relationships, not one-off engagements.",
+  },
+  {
+    icon: Award,
+    title: "Official Partner of Pro Agent",
+    body: "Trustify Sports is proud to be an official partner of Pro Agent, strengthening our position at the heart of the professional football ecosystem.",
   },
 ];
 
