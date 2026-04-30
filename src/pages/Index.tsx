@@ -6,6 +6,7 @@ import { Solution } from "@/components/Solution";
 import { Approach } from "@/components/Approach";
 import { Founders } from "@/components/Founders";
 import { WhyUs } from "@/components/WhyUs";
+import { Timeline } from "@/components/Timeline";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 
