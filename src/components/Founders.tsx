@@ -11,7 +11,7 @@ const founders = [
   },
   {
     initials: "PT",
-    name: "Philip Thiadens",
+    name: "Philip",
     title: "Co-Founder & CFO",
     bio: "Philip is a compliance and forensic expert with a background at EY, where he specialized in financial crime, AML frameworks, and regulatory investigations. He brings deep technical expertise in the exact regulatory landscape that Trustify Sports was built to navigate.",
     linkedin: "https://www.linkedin.com/",
