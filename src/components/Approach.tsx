@@ -14,7 +14,7 @@ const steps = [
   {
     n: "03",
     title: "Operate",
-    body: "We run alongside you — monitoring, updating, and reporting as regulations evolve.",
+    body: "We run alongside you. Monitoring, updating, and reporting as regulations evolve.",
   },
 ];
 
@@ -24,8 +24,8 @@ export const Approach = () => (
     <div className="container-tight relative">
       <Reveal className="max-w-3xl mx-auto text-center">
         <div className="gold-rule mx-auto mb-6" />
-        <h2 className="text-3xl lg:text-5xl leading-tight">
-          Built With the Industry. <span className="text-primary italic">For the Industry.</span>
+        <h2 className="text-3xl lg:text-5xl leading-tight max-w-5xl mx-auto">
+          Built With the Industry. <span className="text-primary italic whitespace-nowrap">For&nbsp;the&nbsp;Industry.</span>
         </h2>
       </Reveal>
 
@@ -35,7 +35,7 @@ export const Approach = () => (
           with clubs, federations, and football insiders. We understand the rhythms of transfer windows,
           the complexity of multi-party transactions, and the pressure organizations are under. That's
           why every part of our solution is designed to fit naturally into how football actually
-          works — not the other way around.
+          works, not the other way around.
         </p>
       </Reveal>
 
