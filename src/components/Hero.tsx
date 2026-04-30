@@ -38,6 +38,15 @@ export const Hero = () => (
         </p>
       </Reveal>
 
+      <Reveal delay={200}>
+        <div className="mt-6 inline-flex items-start gap-3 px-4 py-3 rounded-md border border-primary/30 bg-primary/5 max-w-2xl">
+          <span className="text-primary mt-0.5">🗓️</span>
+          <p className="text-sm text-muted-foreground leading-relaxed">
+            With <span className="text-foreground font-medium">EU AMLA enforcement beginning in 2029</span>, the window to build compliant infrastructure is open — but not indefinitely.
+          </p>
+        </div>
+      </Reveal>
+
       <Reveal delay={240}>
         <div className="mt-10 flex flex-wrap gap-4">
           <Button asChild variant="gold" size="lg">
@@ -52,7 +61,7 @@ export const Hero = () => (
       <Reveal delay={320}>
         <div className="mt-16 pt-8 border-t border-border/60 max-w-2xl">
           <p className="text-sm text-muted-foreground">
-            <span className="text-primary">—</span> Developed in partnership with the football industry, for the football industry.
+            <span className="text-primary">—</span> Developed in partnership with the football industry, for the football industry. <span className="text-foreground/90">Official partner of Pro Agent.</span>
           </p>
         </div>
       </Reveal>

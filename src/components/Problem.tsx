@@ -43,6 +43,20 @@ export const Problem = () => (
           </Reveal>
         ))}
       </div>
+
+      <Reveal delay={150}>
+        <div className="mt-10 p-8 lg:p-10 rounded-lg border border-primary/30 bg-primary/5 flex flex-col md:flex-row gap-6 md:items-center">
+          <div className="flex items-center gap-4 md:w-1/3">
+            <div className="h-12 w-12 rounded-md flex items-center justify-center bg-primary/10 border border-primary/20 shrink-0 text-xl">
+              🗓️
+            </div>
+            <h3 className="font-serif text-xl">The Clock is Ticking</h3>
+          </div>
+          <p className="text-sm text-muted-foreground leading-relaxed md:w-2/3">
+            The new EU <span className="text-foreground font-medium">Anti-Money Laundering Authority (AMLA)</span> regulation comes into full effect in <span className="text-primary font-medium">2029</span>. Football organizations that wait will face a compressed timeline to build compliant infrastructure. The time to act is now.
+          </p>
+        </div>
+      </Reveal>
     </div>
   </section>
 );
