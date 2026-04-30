@@ -34,7 +34,7 @@ export const Hero = () => (
       <Reveal delay={160}>
         <p className="mt-6 text-lg lg:text-xl text-muted-foreground max-w-2xl font-light leading-relaxed">
           Trustify Sports helps clubs and football organizations navigate European AML
-          regulations — so they can focus on what matters most: the game.
+          regulations, so they can focus on what matters most: the game.
         </p>
       </Reveal>
 
