@@ -29,7 +29,7 @@ export const Footer = () => (
 
         <div className="flex md:justify-end items-center gap-5">
           <a
-            href="https://www.linkedin.com/"
+            href="https://www.linkedin.com/company/trustify-sports/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-primary transition-colors"
