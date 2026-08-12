@@ -9,14 +9,19 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        default: "bg-primary text-primary-foreground hover:bg-[hsl(var(--primary-hover))]",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        gold: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_8px_24px_-12px_hsl(var(--primary)/0.6)]",
+        // Brand primary CTA — white on #1F2747, hover to color-600 (#36447C). For light surfaces.
+        gold: "bg-primary text-primary-foreground hover:bg-[hsl(var(--primary-hover))]",
+        // Brand secondary CTA — #1F2747 outline/text, fills on hover. For light surfaces.
         goldOutline: "border border-primary/60 text-primary hover:bg-primary hover:text-primary-foreground bg-transparent",
+        // For navy (.on-navy) surfaces — hardcoded so scope token remaps don't affect them.
+        onDark: "bg-white text-[hsl(228_39%_20%)] hover:bg-[hsl(228_39%_90%)]",
+        onDarkOutline: "border border-white/40 text-white bg-transparent hover:bg-white/10",
         onLight: "bg-[hsl(var(--on-light-foreground))] text-[hsl(var(--surface-light))] hover:opacity-90",
       },
       size: {

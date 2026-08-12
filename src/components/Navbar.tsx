@@ -30,25 +30,29 @@ export const Navbar = () => {
       }`}
     >
       <nav className="container-tight flex items-center justify-between h-16">
-        <Logo />
+        <Logo className={scrolled ? "text-foreground" : "text-white"} />
 
         <div className="hidden md:flex items-center gap-8">
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className={`text-sm transition-colors ${
+                scrolled
+                  ? "text-muted-foreground hover:text-foreground"
+                  : "text-white/80 hover:text-white"
+              }`}
             >
               {l.label}
             </a>
           ))}
-          <Button asChild variant="gold" size="sm">
+          <Button asChild variant={scrolled ? "gold" : "onDark"} size="sm">
             <a href="#contact">Get in Touch</a>
           </Button>
         </div>
 
         <button
-          className="md:hidden text-foreground p-2"
+          className={`md:hidden p-2 ${scrolled ? "text-foreground" : "text-white"}`}
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle menu"
         >

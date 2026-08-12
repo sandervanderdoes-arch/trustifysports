@@ -20,7 +20,7 @@ const items = [
 ];
 
 export const Problem = () => (
-  <section id="about" className="py-24 lg:py-32 bg-surface-teal relative">
+  <section id="about" className="on-navy py-24 lg:py-32 bg-surface-teal relative">
     <div className="absolute inset-0 bg-grid opacity-30" aria-hidden />
     <div className="container-tight relative">
       <Reveal className="max-w-2xl">

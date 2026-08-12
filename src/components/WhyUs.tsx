@@ -25,7 +25,7 @@ const reasons = [
 ];
 
 export const WhyUs = () => (
-  <section className="py-24 lg:py-32 bg-surface-deep relative">
+  <section className="on-navy py-24 lg:py-32 bg-surface-deep relative">
     <div className="absolute inset-0 bg-grid opacity-30" aria-hidden />
     <div className="container-tight relative">
       <Reveal className="max-w-2xl">

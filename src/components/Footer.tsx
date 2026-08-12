@@ -9,7 +9,7 @@ const links = [
 ];
 
 export const Footer = () => (
-  <footer className="bg-surface-deep border-t border-border py-14">
+  <footer className="on-navy bg-surface-deep border-t border-border py-14">
     <div className="container-tight">
       <div className="grid gap-10 md:grid-cols-3 items-start">
         <div>
