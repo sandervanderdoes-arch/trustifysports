@@ -34,7 +34,7 @@ export const Audiences = () => (
   <section
     id="who-we-serve"
     className="py-24 lg:py-32"
-    style={{ background: "hsl(var(--surface-light))" }}
+    style={{ background: "hsl(var(--surface-muted))" }}
   >
     <div className="container-tight">
       <Reveal className="max-w-3xl">

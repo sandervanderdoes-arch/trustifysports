@@ -48,7 +48,7 @@ export const Approach = () => (
         />
         {steps.map((s, i) => (
           <Reveal key={s.n} delay={i * 120}>
-            <div className="relative p-8 rounded-lg border border-border bg-card/40 backdrop-blur-sm h-full">
+            <div className="relative p-8 rounded-lg border border-[hsl(var(--on-light-border))] bg-surface-light shadow-[var(--shadow-card)] h-full">
               <div className="absolute -top-4 left-8 h-8 w-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-serif text-sm">
                 {i + 1}
               </div>

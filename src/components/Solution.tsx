@@ -20,7 +20,7 @@ const features = [
 ];
 
 export const Solution = () => (
-  <section id="how" className="py-24 lg:py-32 bg-surface-light text-on-light">
+  <section id="how" className="py-24 lg:py-32 bg-surface-muted text-on-light">
     <div className="container-tight">
       <Reveal className="max-w-3xl">
         <div className="gold-rule mb-6" />

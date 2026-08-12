@@ -23,7 +23,7 @@
     --surface-deep: 228 39% 12%;         /* deep navy band (near color-800 #171D35) */
     --surface-teal: 228 39% 16%;         /* navy band — teal is NOT in the brand palette */
     --surface-light: 0 0% 100%;          /* white */
-    --surface-muted: 228 39% 97%;        /* lightest indigo tint (near color-100) */
+    --surface-muted: 228 39% 92%;        /* soft indigo tint — the shared bg for the mid light zone */
 
     --card: 0 0% 100%;
     --card-foreground: 215 28% 17%;
