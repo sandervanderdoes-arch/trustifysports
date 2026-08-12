@@ -12,7 +12,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        serif: ["'Playfair Display'", "Georgia", "serif"],
+        // Headline face per brand (Claris Sans); falls back to Inter until the licensed file is added.
+        serif: ["'Claris Sans'", "Inter", "system-ui", "sans-serif"],
         sans: ["Inter", "system-ui", "sans-serif"],
       },
       colors: {

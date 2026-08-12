@@ -94,20 +94,20 @@ export const Contact = () => {
             <div className="grid gap-5 sm:grid-cols-2">
               <div className="space-y-2">
                 <Label htmlFor="name" className="text-on-light">Name</Label>
-                <Input id="name" name="name" required maxLength={100} placeholder="Your full name" className="text-white placeholder:text-white/50" />
+                <Input id="name" name="name" required maxLength={100} placeholder="Your full name" className="text-on-light placeholder:text-on-light-muted/60" />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="email" className="text-on-light">Email</Label>
-                <Input id="email" name="email" type="email" required maxLength={200} placeholder="you@example.com" className="text-white placeholder:text-white/50" />
+                <Input id="email" name="email" type="email" required maxLength={200} placeholder="you@example.com" className="text-on-light placeholder:text-on-light-muted/60" />
               </div>
             </div>
             <div className="space-y-2">
               <Label htmlFor="organization" className="text-on-light">Organization</Label>
-              <Input id="organization" name="organization" required maxLength={150} placeholder="Club, federation, fund…" className="text-white placeholder:text-white/50" />
+              <Input id="organization" name="organization" required maxLength={150} placeholder="Club, federation, fund…" className="text-on-light placeholder:text-on-light-muted/60" />
             </div>
             <div className="space-y-2">
               <Label htmlFor="message" className="text-on-light">Message</Label>
-              <Textarea id="message" name="message" required maxLength={2000} rows={6} placeholder="Tell us a bit about what you're looking for." className="text-white placeholder:text-white/50" />
+              <Textarea id="message" name="message" required maxLength={2000} rows={6} placeholder="Tell us a bit about what you're looking for." className="text-on-light placeholder:text-on-light-muted/60" />
             </div>
             <Button type="submit" variant="gold" size="lg" disabled={submitting} className="w-full sm:w-auto">
               {submitting ? "Sending…" : "Send Message"}

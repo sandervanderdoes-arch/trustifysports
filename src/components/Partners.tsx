@@ -1,7 +1,7 @@
 import { Reveal } from "./Reveal";
 
 export const Partners = () => (
-  <section className="py-12 lg:py-16 border-y border-border bg-surface-deep/50">
+  <section className="on-navy py-12 lg:py-16 border-y border-border bg-surface-deep">
     <div className="container-tight">
       <Reveal>
         <div className="flex flex-col items-center gap-6">

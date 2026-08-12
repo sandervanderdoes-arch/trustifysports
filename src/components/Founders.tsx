@@ -33,7 +33,7 @@ export const Founders = () => (
               <div className="flex items-center gap-5">
                 <div
                   className="h-20 w-20 rounded-full flex items-center justify-center font-serif text-xl text-primary-foreground border-2 border-primary/30"
-                  style={{ background: "var(--gradient-gold)" }}
+                  style={{ background: "hsl(var(--primary))" }}
                   aria-hidden
                 >
                   {f.initials}

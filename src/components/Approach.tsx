@@ -19,7 +19,7 @@ const steps = [
 ];
 
 export const Approach = () => (
-  <section className="py-24 lg:py-32 bg-background relative overflow-hidden">
+  <section className="py-24 lg:py-32 bg-surface-muted relative overflow-hidden">
     <div className="absolute inset-0 bg-grid opacity-40" aria-hidden />
     <div className="container-tight relative">
       <Reveal className="max-w-3xl mx-auto text-center">

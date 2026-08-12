@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Reveal } from "./Reveal";
 
 export const Hero = () => (
-  <section id="top" className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden bg-hero">
+  <section id="top" className="on-navy relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden bg-hero">
     <div className="absolute inset-0 bg-grid opacity-60" aria-hidden />
     <div
       className="absolute inset-x-0 top-0 h-px"
@@ -39,10 +39,10 @@ export const Hero = () => (
 
       <Reveal delay={240}>
         <div className="mt-10 flex flex-wrap gap-4">
-          <Button asChild variant="gold" size="lg">
+          <Button asChild variant="onDark" size="lg">
             <a href="#about">Learn More</a>
           </Button>
-          <Button asChild variant="goldOutline" size="lg">
+          <Button asChild variant="onDarkOutline" size="lg">
             <a href="#contact">Contact Us</a>
           </Button>
         </div>

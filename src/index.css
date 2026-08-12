@@ -2,57 +2,85 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Trustify Sports — Fintech-grade design system. All colors HSL. */
+/* Trustify Sports — brand design system. Palette + type per Brand Guidelines (Anymark, Aug 2026).
+   Primary #1F2747, Dark #1F2937, White #FFFFFF, blue ramp color-100..800. All colors HSL. */
+
+/* Headline typeface. Drop the licensed Claris Sans file at public/fonts/ClarisSans.woff2 to
+   activate it; until then headings fall back to Inter (the brand's recommended pairing). */
+@font-face {
+  font-family: "Claris Sans";
+  src: url("/fonts/ClarisSans.woff2") format("woff2");
+  font-weight: 400 700;
+  font-display: swap;
+}
 
 @layer base {
   :root {
-    /* Brand palette */
-    --background: 215 60% 10%;            /* deep navy #0A1628 */
-    --foreground: 0 0% 100%;
+    /* Light-first brand palette */
+    --background: 0 0% 100%;             /* white */
+    --foreground: 215 28% 17%;           /* dark #1F2937 */
 
-    --surface-deep: 215 60% 8%;
-    --surface-teal: 196 70% 18%;          /* dark teal #0D3B4F */
-    --surface-light: 40 33% 98%;          /* near-white */
-    --surface-muted: 40 20% 95%;
+    --surface-deep: 228 39% 12%;         /* deep navy band (near color-800 #171D35) */
+    --surface-teal: 228 39% 16%;         /* navy band — teal is NOT in the brand palette */
+    --surface-light: 0 0% 100%;          /* white */
+    --surface-muted: 228 39% 97%;        /* lightest indigo tint (near color-100) */
 
-    --card: 215 55% 13%;
-    --card-foreground: 0 0% 100%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 28% 17%;
 
-    --popover: 215 55% 13%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 28% 17%;
 
-    --primary: 43 53% 54%;                /* muted gold #C9A84C */
-    --primary-foreground: 215 60% 10%;
+    --primary: 228 39% 20%;              /* brand #1F2747 */
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 228 39% 35%;        /* color-600 #36447C — brand primary CTA hover */
 
-    --secondary: 215 40% 18%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 228 39% 97%;
+    --secondary-foreground: 228 39% 20%;
 
-    --muted: 215 30% 22%;
-    --muted-foreground: 215 15% 70%;
+    --muted: 228 39% 96%;
+    --muted-foreground: 228 16% 42%;
 
-    --accent: 43 53% 54%;
-    --accent-foreground: 215 60% 10%;
+    --accent: 228 39% 20%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 70% 50%;
+    --destructive: 0 70% 45%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 215 35% 22%;
-    --input: 215 35% 22%;
-    --ring: 43 53% 54%;
+    --border: 228 33% 90%;               /* near color-100 */
+    --input: 228 33% 88%;
+    --ring: 228 39% 35%;                 /* color-600 */
 
     --radius: 0.375rem;
 
     /* On-light tokens (used inside light sections) */
-    --on-light-foreground: 215 60% 10%;
-    --on-light-muted: 215 25% 35%;
-    --on-light-border: 215 20% 88%;
+    --on-light-foreground: 215 28% 17%;
+    --on-light-muted: 228 16% 40%;
+    --on-light-border: 228 33% 88%;
 
-    /* Effects */
-    --gradient-hero: radial-gradient(ellipse at top, hsl(196 70% 18% / 0.6), transparent 60%), linear-gradient(180deg, hsl(215 60% 10%), hsl(215 60% 8%));
-    --gradient-gold: linear-gradient(135deg, hsl(43 53% 60%), hsl(43 53% 48%));
-    --shadow-elegant: 0 20px 60px -20px hsl(215 60% 4% / 0.5);
-    --shadow-card: 0 1px 3px hsl(215 60% 4% / 0.06), 0 8px 24px -8px hsl(215 60% 4% / 0.08);
+    /* Effects — brand navy, no gold */
+    --gradient-hero: radial-gradient(ellipse at top, hsl(228 39% 26% / 0.55), transparent 60%), linear-gradient(180deg, hsl(228 39% 14%), hsl(228 39% 10%));
+    --gradient-primary: linear-gradient(135deg, hsl(228 39% 26%), hsl(228 39% 18%));
+    --shadow-elegant: 0 20px 60px -20px hsl(228 39% 8% / 0.35);
+    --shadow-card: 0 1px 3px hsl(228 39% 8% / 0.06), 0 8px 24px -8px hsl(228 39% 8% / 0.08);
     --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Scope for navy ("Base") sections. Remaps the semantic tokens so existing
+     text-primary / text-muted-foreground / border-border / bg-card utilities read
+     correctly on dark navy, using brand-approved light-blue + white accents. */
+  .on-navy {
+    --foreground: 0 0% 100%;
+    --primary: 228 39% 78%;             /* color-200/300 — brand-approved accent on Base */
+    --primary-foreground: 228 39% 15%;
+    --secondary: 228 39% 22%;
+    --secondary-foreground: 0 0% 100%;
+    --muted-foreground: 228 22% 78%;
+    --card: 228 39% 17%;
+    --card-foreground: 0 0% 100%;
+    --border: 228 22% 32%;
+    --input: 228 22% 32%;
+    color: hsl(0 0% 100%);
   }
 }
 
@@ -70,7 +98,7 @@
 }
 
 @layer utilities {
-  .font-serif { font-family: 'Playfair Display', Georgia, serif; }
+  .font-serif { font-family: 'Claris Sans', 'Inter', system-ui, -apple-system, sans-serif; }
   .font-sans  { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
 
   .container-tight { @apply max-w-6xl mx-auto px-6 lg:px-8; }
@@ -89,8 +117,10 @@
   .text-on-light { color: hsl(var(--on-light-foreground)); }
   .text-on-light-muted { color: hsl(var(--on-light-muted)); }
 
+  /* Thin brand accent rule under section headings. Resolves to indigo on light
+     sections and light-blue within .on-navy sections. (Class name kept for compatibility.) */
   .gold-rule {
-    background: var(--gradient-gold);
+    background: hsl(var(--primary));
     height: 2px; width: 40px; border-radius: 2px;
   }
 
