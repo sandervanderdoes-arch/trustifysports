@@ -28,7 +28,7 @@ const founders = [
 export const Founders = () => (
   <section id="founders" className="py-24 lg:py-32 bg-surface-muted text-on-light">
     <div className="container-tight">
-      <Reveal className="max-w-2xl">
+      <Reveal className="max-w-5xl mx-auto text-center">
         <div className="gold-rule mb-6" />
         <h2 className="text-3xl lg:text-5xl leading-tight text-on-light">The Team</h2>
       </Reveal>

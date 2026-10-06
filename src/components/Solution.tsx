@@ -22,7 +22,7 @@ const features = [
 export const Solution = () => (
   <section id="how" className="py-24 lg:py-32 bg-surface-muted text-on-light">
     <div className="container-tight">
-      <Reveal className="max-w-3xl">
+      <Reveal className="max-w-5xl mx-auto text-center">
         <div className="gold-rule mb-6" />
         <h2 className="text-3xl lg:text-5xl leading-tight text-on-light">
           What Trustify Sports Does

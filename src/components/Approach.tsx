@@ -22,14 +22,14 @@ export const Approach = () => (
   <section className="py-24 lg:py-32 bg-surface-muted relative overflow-hidden">
     <div className="absolute inset-0 bg-grid opacity-40" aria-hidden />
     <div className="container-tight relative">
-      <Reveal className="max-w-3xl mx-auto text-center">
+      <Reveal className="max-w-5xl mx-auto text-center">
         <div className="gold-rule mx-auto mb-6" />
         <h2 className="text-3xl lg:text-5xl leading-tight max-w-5xl mx-auto">
           Built With the Industry. <span className="text-primary italic whitespace-nowrap">For&nbsp;the&nbsp;Industry.</span>
         </h2>
       </Reveal>
 
-      <Reveal delay={100} className="max-w-3xl mx-auto mt-8 text-center">
+      <Reveal delay={100} className="max-w-5xl mx-auto mt-8 text-center">
         <p className="text-lg text-muted-foreground leading-relaxed font-light">
           Trustify Sports was not built in isolation. Our approach is grounded in direct collaboration
           with clubs, agents and football stakeholders. We understand the rhythms of transfer windows,
