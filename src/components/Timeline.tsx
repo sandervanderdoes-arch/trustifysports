@@ -60,8 +60,8 @@ export const Timeline = () => (
   <section id="timeline" className="on-navy py-24 lg:py-32 bg-surface-deep relative">
     <div className="absolute inset-0 bg-grid opacity-30" aria-hidden />
     <div className="container-tight relative">
-      <Reveal className="max-w-2xl">
-        <div className="gold-rule mb-6" />
+      <Reveal className="max-w-5xl mx-auto text-center">
+        <div className="gold-rule mb-6 mx-auto" />
         <h2 className="text-3xl lg:text-5xl leading-tight">
           The Road to <span className="text-primary italic">10 July 2029</span>
         </h2>

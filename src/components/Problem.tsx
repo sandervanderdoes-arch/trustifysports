@@ -23,8 +23,8 @@ export const Problem = () => (
   <section id="about" className="on-navy py-24 lg:py-32 bg-surface-teal relative">
     <div className="absolute inset-0 bg-grid opacity-30" aria-hidden />
     <div className="container-tight relative">
-      <Reveal className="max-w-2xl">
-        <div className="gold-rule mb-6" />
+      <Reveal className="max-w-5xl mx-auto text-center">
+        <div className="gold-rule mb-6 mx-auto" />
         <h2 className="text-3xl lg:text-5xl leading-tight">
           The Regulatory Challenge Facing Football
         </h2>

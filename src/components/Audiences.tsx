@@ -38,8 +38,8 @@ export const Audiences = () => (
     style={{ background: "hsl(var(--surface-muted))" }}
   >
     <div className="container-tight">
-      <Reveal className="max-w-3xl">
-        <div className="gold-rule mb-6" />
+      <Reveal className="max-w-5xl mx-auto text-center">
+        <div className="gold-rule mb-6 mx-auto" />
         <h2 className="text-on-light text-3xl lg:text-5xl leading-tight">
           Built for Every Corner of the Game
         </h2>
