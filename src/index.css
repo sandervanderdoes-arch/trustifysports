@@ -115,10 +115,10 @@
   .bg-hero { background: var(--gradient-hero); }
 
   /* Hero headline: sized from the usable container width so each of the two
-     lines always fits on one line ("Compliance Infrastructure Built for" is
-     ~15.6x its font size wide), and never gets clipped or wrapped to a third. */
+     lines always fits on one line ("Built for Professional Football" is the
+     longest at ~13.0x its font size), and never gets clipped or wrapped. */
   .hero-headline {
-    font-size: clamp(1rem, calc((100vw - 64px) / 15.6), 4.25rem);
+    font-size: clamp(1rem, calc((100vw - 64px) / 13.1), 4.25rem);
   }
 
   .text-on-light { color: hsl(var(--on-light-foreground)); }
