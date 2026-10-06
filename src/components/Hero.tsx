@@ -24,8 +24,8 @@ export const Hero = () => (
       </Reveal>
 
       <Reveal delay={80}>
-        <h1 className="font-serif leading-[1.05] text-4xl sm:text-5xl lg:text-6xl xl:text-7xl max-w-4xl">
-          Compliance Infrastructure Built for
+        <h1 className="font-serif leading-[1.05] hero-headline">
+          <span className="block whitespace-nowrap">Compliance Infrastructure Built for</span>
           <span className="block whitespace-nowrap text-primary italic">Professional Football</span>
         </h1>
       </Reveal>
