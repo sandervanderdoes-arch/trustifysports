@@ -21,7 +21,7 @@ const milestones = [
     icon: Wrench,
     title: "Implement Infrastructure",
     body:
-      "Deploy KYC, transaction monitoring, and reporting workflows tailored to football's commercial structures and counterparty types.",
+      "From 10 July 2027 the AMLR applies to banks and financial counterparties, and new beneficial-ownership rules take effect. Expect due-diligence requests from your banks and lenders. Deploy due diligence, monitoring and reporting workflows built for football.",
     actions: [
       "Onboard KYC tooling",
       "Operationalize monitoring",
@@ -34,7 +34,7 @@ const milestones = [
     icon: ShieldCheck,
     title: "Test & Audit",
     body:
-      "Independent assurance on controls, evidence trails, and reporting pipelines. Remediate gaps before AMLA enforcement begins.",
+      "Independent assurance on controls, evidence trails, and reporting pipelines. Remediate gaps before your obligations apply.",
     actions: [
       "Independent control review",
       "Mock regulatory reporting",
@@ -43,14 +43,14 @@ const milestones = [
   },
   {
     year: "2029",
-    label: "Enforcement",
+    label: "Obligations Apply",
     icon: Flag,
-    title: "AMLA Goes Live",
+    title: "10 July 2029",
     body:
-      "EU Anti-Money Laundering Authority enforcement begins. Compliant organizations operate with confidence; latecomers face compressed timelines and scrutiny.",
+      "AMLR obligations apply to professional football clubs and football agents, supervised by national AML supervisors. Compliant organisations operate with confidence; latecomers face compressed timelines and scrutiny.",
     actions: [
       "Continuous monitoring",
-      "Regulator engagement",
+      "Supervisor engagement",
       "Ongoing assurance",
     ],
   },
@@ -63,11 +63,10 @@ export const Timeline = () => (
       <Reveal className="max-w-2xl">
         <div className="gold-rule mb-6" />
         <h2 className="text-3xl lg:text-5xl leading-tight">
-          The Road to <span className="text-primary italic">2029</span>
+          The Road to <span className="text-primary italic">10 July 2029</span>
         </h2>
         <p className="mt-6 text-muted-foreground leading-relaxed">
-          A pragmatic four-year readiness path for clubs, federations, and
-          football organizations preparing for EU AMLA enforcement.
+          A readiness path for clubs and agents preparing for the AMLR.
         </p>
       </Reveal>
 

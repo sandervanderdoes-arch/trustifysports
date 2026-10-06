@@ -32,8 +32,7 @@ export const Hero = () => (
 
       <Reveal delay={160}>
         <p className="mt-6 text-lg lg:text-xl text-muted-foreground max-w-2xl font-light leading-relaxed">
-          Trustify Sports helps clubs and football organizations navigate European AML
-          regulations, so they can focus on what matters most: the game.
+          From 10 July 2029, professional football clubs and football agents become obliged entities under the EU Anti-Money Laundering Regulation. Trustify Sports is the compliance infrastructure built for it.
         </p>
       </Reveal>
 
@@ -51,7 +50,7 @@ export const Hero = () => (
       <Reveal delay={320}>
         <div className="mt-16 pt-8 border-t border-border/60 max-w-2xl">
           <p className="text-sm text-muted-foreground">
-            Developed in partnership with the football industry, for the football industry. <span className="text-foreground/90">Official partner of Pro Agent.</span>
+            Developed with clubs and agents, for the football industry. <span className="text-foreground/90">Official partner of Pro Agent.</span>
           </p>
         </div>
       </Reveal>

@@ -7,11 +7,11 @@ const audiences = [
     eyebrow: "Football Clubs",
     title: "For Football Clubs",
     body:
-      "Clubs sit at the center of the most complex financial flows in football: transfers, agent fees, sponsorship structures, and ownership arrangements. Trustify Sports maps your full AML exposure and builds the internal workflows your organization needs to stay compliant as European regulatory scrutiny intensifies ahead of AMLA 2029.",
+      "Clubs are obliged for four types of transaction: with investors, with sponsors and advertisers, with agents and other intermediaries, and in player transfers. Trustify maps your exposure across all four and builds the workflows and evidence your supervisor will expect.",
     bullets: [
-      "Transfer and payment due diligence",
-      "Ownership and UBO screening",
-      "Ongoing transaction monitoring and reporting",
+      "Due diligence on investors, sponsors, agents and transfer counterparties",
+      "Beneficial-ownership and control mapping, with sanctions and PEP screening",
+      "Transaction monitoring with a reporting workflow. Trustify prepares the file, your club files",
     ],
     accent: "left",
   },
@@ -20,11 +20,12 @@ const audiences = [
     eyebrow: "Player Agents",
     title: "For Player Agents",
     body:
-      "Player agents operate in an environment of growing regulatory expectation. Under the new EU AML framework, agents handling significant transaction flows are increasingly treated as obliged entities. Trustify Sports gives agents the compliance infrastructure they need to operate with confidence and credibility.",
+      "From 10 July 2029, every football agent is an obliged entity under the AMLR, regardless of size, with no exemption. A one-person agency carries the same obligations, applied proportionately to its risk.",
     bullets: [
-      "AML policy and procedure setup",
+      "AML risk assessment, policies and procedures",
       "Client and counterparty due diligence",
-      "Regulatory readiness for AMLA 2029",
+      "Monitoring and a reporting workflow",
+      "Readiness for 10 July 2029",
     ],
     accent: "right",
   },

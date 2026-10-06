@@ -1,11 +1,11 @@
-import { TrendingUp, Target, Handshake, Award } from "lucide-react";
+import { TrendingUp, Target, Handshake, Award, Globe2 } from "lucide-react";
 import { Reveal } from "./Reveal";
 
 const reasons = [
   {
     icon: TrendingUp,
-    title: "Regulatory Tailwinds",
-    body: "European AML directives are accelerating. Football is increasingly in scope. The window to build proper infrastructure is now.",
+    title: "The Rules Are Written",
+    body: "The AMLR was published in 2024, AMLA is finalising the technical standards, and clubs and agents have until 10 July 2029. Building and evidencing a compliance programme takes most organisations 18 to 24 months.",
   },
   {
     icon: Target,
@@ -21,6 +21,11 @@ const reasons = [
     icon: Award,
     title: "Official Partner of Pro Agent",
     body: "Trustify Sports is proud to be an official partner of Pro Agent, strengthening our position at the heart of the professional football ecosystem.",
+  },
+  {
+    icon: Globe2,
+    title: "Beyond the EU",
+    body: "In England, the Independent Football Regulator's owners' test is already in force, and in September 2026 the UK government announced a consultation on extending AML rules to clubs and agents.",
   },
 ];
 

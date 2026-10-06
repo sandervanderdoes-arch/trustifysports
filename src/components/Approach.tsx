@@ -32,7 +32,7 @@ export const Approach = () => (
       <Reveal delay={100} className="max-w-3xl mx-auto mt-8 text-center">
         <p className="text-lg text-muted-foreground leading-relaxed font-light">
           Trustify Sports was not built in isolation. Our approach is grounded in direct collaboration
-          with clubs, federations, and football insiders. We understand the rhythms of transfer windows,
+          with clubs, agents and football stakeholders. We understand the rhythms of transfer windows,
           the complexity of multi-party transactions, and the pressure organizations are under. That's
           why every part of our solution is designed to fit naturally into how football actually
           works, not the other way around.

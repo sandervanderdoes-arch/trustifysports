@@ -4,18 +4,18 @@ import { Reveal } from "./Reveal";
 const items = [
   {
     icon: Landmark,
-    title: "Growing AML Scrutiny",
-    body: "European regulators are applying financial sector standards to professional football transfers, agent fees, and club ownership structures.",
+    title: "Football Is Now in Scope",
+    body: "Regulation (EU) 2024/1624 names professional football clubs and football agents as obliged entities. Customer due diligence, beneficial-ownership checks, monitoring and suspicious-transaction reporting now apply directly to football.",
   },
   {
     icon: ClipboardList,
-    title: "Complex Compliance Burdens",
-    body: "Clubs and governing bodies face increasing reporting obligations with limited in-house infrastructure to meet them.",
+    title: "Bank-Grade Standards, No Bank-Grade Infrastructure",
+    body: "Clubs and agents must produce the same evidence a bank would: documented risk assessments, verified owners, auditable decisions. Yet they have little in-house infrastructure to do it.",
   },
   {
     icon: AlertTriangle,
-    title: "Reputational & Financial Risk",
-    body: "Non-compliance carries significant legal exposure, sanctions, and reputational damage.",
+    title: "Legal and Sporting Risk",
+    body: "Supervisors assess the file, not the intention. Gaps mean supervisory sanctions and reputational damage, and incomplete ownership disclosure already carries sporting consequences under UEFA licensing.",
   },
 ];
 
@@ -53,7 +53,7 @@ export const Problem = () => (
             <h3 className="font-serif text-xl">The Clock is Ticking</h3>
           </div>
           <p className="text-sm text-muted-foreground leading-relaxed md:w-2/3">
-            The new EU <span className="text-foreground font-medium">Anti-Money Laundering Authority (AMLA)</span> regulation comes into full effect in <span className="text-primary font-medium">2029</span>. Football organizations that wait will face a compressed timeline to build compliant infrastructure. The time to act is now.
+            AMLR obligations for clubs and agents apply from <span className="text-primary font-medium">10 July 2029</span>. But your banks, lenders and payment providers are obliged from <span className="text-foreground font-medium">10 July 2027</span>, and they will ask for ownership chains and source of funds well before 2029. The time to build is now.
           </p>
         </div>
       </Reveal>
