@@ -8,6 +8,7 @@ import { Approach } from "@/components/Approach";
 import { Founders } from "@/components/Founders";
 import { WhyUs } from "@/components/WhyUs";
 import { Timeline } from "@/components/Timeline";
+import { FoundingPartner } from "@/components/FoundingPartner";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 
@@ -24,6 +25,7 @@ const Index = () => {
       <WhyUs />
       <Timeline />
       <Partners />
+      <FoundingPartner />
       <Contact />
       <Footer />
     </main>

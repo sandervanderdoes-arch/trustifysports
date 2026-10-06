@@ -65,7 +65,7 @@ export const Contact = () => {
         },
       });
 
-      toast.success("Thanks! Your message has been sent.");
+      toast.success("Thanks! Your message has been sent. We will get back to you shortly.");
       formEl.reset();
     } catch (err) {
       console.error(err);
@@ -112,6 +112,10 @@ export const Contact = () => {
             <Button type="submit" variant="gold" size="lg" disabled={submitting} className="w-full sm:w-auto">
               {submitting ? "Sending…" : "Send Message"}
             </Button>
+            <p className="text-xs text-on-light-muted">
+              We use your details only to respond to your message. See our{" "}
+              <a href="/privacy" className="underline hover:text-primary">Privacy Notice</a>.
+            </p>
           </form>
         </Reveal>
 
@@ -122,7 +126,7 @@ export const Contact = () => {
               {CONTACT_EMAIL}
             </a>
             <span className="hidden sm:block h-4 w-px bg-[hsl(var(--on-light-border))]" />
-            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-primary transition-colors">
+            <a href="https://www.linkedin.com/company/trustify-sports/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-primary transition-colors">
               <Linkedin className="h-4 w-4" />
               Connect on LinkedIn
             </a>

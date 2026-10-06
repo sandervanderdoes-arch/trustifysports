@@ -4,7 +4,7 @@ import { Logo } from "./Logo";
 const links = [
   { href: "#about", label: "About" },
   { href: "#how", label: "How It Works" },
-  { href: "#founders", label: "Founders" },
+  { href: "#founders", label: "Team" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -49,7 +49,8 @@ export const Footer = () => (
 
       <div className="mt-10 pt-6 border-t border-border/60 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between text-xs text-muted-foreground">
         <p>© {new Date().getFullYear()} Trustify Sports. All rights reserved.</p>
-        <p className="opacity-70">Built for the European football industry.</p>
+        <p className="opacity-80 max-w-xl sm:text-right">Trustify Sports supports compliance but does not provide legal advice. Obligations under Regulation (EU) 2024/1624 remain with each obliged entity.</p>
+        <a href="/privacy" className="hover:text-foreground transition-colors">Privacy Notice</a>
       </div>
     </div>
   </footer>

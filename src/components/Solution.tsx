@@ -5,7 +5,7 @@ const features = [
   {
     icon: Activity,
     title: "Regulatory Intelligence",
-    body: "Real-time monitoring and structured guidance on European AML obligations relevant to football transactions, ownership, and operations.",
+    body: "Structured, versioned guidance on the AMLR, AMLA's technical standards and national implementation, mapped to football transactions.",
   },
   {
     icon: Workflow,
@@ -30,7 +30,7 @@ export const Solution = () => (
         <p className="mt-6 text-lg text-on-light-muted leading-relaxed">
           Trustify Sports provides the compliance infrastructure that football organizations need
           to meet European AML requirements without building it themselves. We handle the complexity
-          so clubs, federations, and governing bodies can stay focused on performance.
+          so clubs and agents can stay focused on performance.
         </p>
       </Reveal>
 
