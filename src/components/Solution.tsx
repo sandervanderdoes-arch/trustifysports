@@ -23,7 +23,7 @@ export const Solution = () => (
   <section id="how" className="py-24 lg:py-32 bg-surface-muted text-on-light">
     <div className="container-tight">
       <Reveal className="max-w-5xl mx-auto text-center">
-        <div className="gold-rule mb-6" />
+        <div className="gold-rule mb-6 mx-auto" />
         <h2 className="text-3xl lg:text-5xl leading-tight text-on-light">
           What Trustify Sports Does
         </h2>

@@ -6,7 +6,7 @@ export const FoundingPartner = () => (
     <div className="absolute inset-0 bg-grid opacity-30" aria-hidden />
     <div className="container-tight relative">
       <Reveal className="max-w-5xl mx-auto text-center">
-        <div className="gold-rule mb-6" />
+        <div className="gold-rule mb-6 mx-auto" />
         <h2 className="text-3xl lg:text-5xl leading-tight">Become a Founding Partner</h2>
         <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
           We are working with a small group of clubs and agents to shape the platform ahead of
