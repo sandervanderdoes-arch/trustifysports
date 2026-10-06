@@ -1,3 +1,4 @@
+import { Seo } from "@/components/Seo";
 import { useEffect, useState } from "react";
 import { useSearchParams, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -63,6 +64,7 @@ const Unsubscribe = () => {
 
   return (
     <main className="min-h-screen bg-background text-foreground flex items-center justify-center p-6">
+      <Seo title="Unsubscribe | Trustify Sports" description="Manage your Trustify Sports email preferences and unsubscribe from emails." path="/unsubscribe" noindex />
       <div className="max-w-md w-full bg-surface-light text-on-light border border-[hsl(var(--on-light-border))] rounded-lg p-8 shadow-[var(--shadow-card)] text-center">
         <h1 className="text-2xl font-semibold mb-3">Unsubscribe</h1>
         {state === "validating" && <p className="text-on-light-muted">Validating your link…</p>}

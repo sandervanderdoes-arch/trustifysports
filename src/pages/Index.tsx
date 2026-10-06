@@ -1,3 +1,4 @@
+import { Seo } from "@/components/Seo";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { Partners } from "@/components/Partners";
@@ -15,6 +16,7 @@ import { Footer } from "@/components/Footer";
 const Index = () => {
   return (
     <main className="min-h-screen bg-background text-foreground">
+      <Seo title="Trustify Sports | AML Compliance Infrastructure for Professional Football" description="From 10 July 2029, professional football clubs and football agents are obliged entities under the EU Anti-Money Laundering Regulation. Trustify Sports is the compliance infrastructure built for it." path="/" />
       <Navbar />
       <Hero />
       <Problem />
