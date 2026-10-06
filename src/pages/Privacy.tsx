@@ -1,8 +1,10 @@
+import { Seo } from "@/components/Seo";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 
 const Privacy = () => (
   <main className="min-h-screen bg-background text-foreground">
+      <Seo title="Privacy Notice | Trustify Sports" description="How Trustify Sports collects, uses and protects personal data submitted through our website, in line with the EU GDPR." path="/privacy" />
     <Navbar />
     <section className="pt-32 pb-24 bg-surface-light text-on-light">
       <div className="container-narrow space-y-6 text-sm leading-relaxed text-on-light-muted">
