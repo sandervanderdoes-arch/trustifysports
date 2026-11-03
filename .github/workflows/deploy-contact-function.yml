@@ -33,20 +33,23 @@ jobs:
           fi
       - if: steps.setup.outputs.ready == 'true'
         uses: actions/checkout@v4
+      # Pinned so a new CLI release can't change behaviour unannounced. Commands
+      # below pass --yes: there is no terminal here to answer the CLI's
+      # confirmation prompts, and without it they change nothing.
       - if: steps.setup.outputs.ready == 'true'
         uses: supabase/setup-cli@v1
         with:
-          version: latest
+          version: 3.0.0
       - name: Store the Resend key
         if: steps.setup.outputs.ready == 'true'
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
         run: |
           if [ -n "$RESEND_API_KEY" ]; then
-            supabase secrets set --project-ref "$PROJECT_REF" RESEND_API_KEY="$RESEND_API_KEY"
+            supabase secrets set --remote="$PROJECT_REF" --yes RESEND_API_KEY="$RESEND_API_KEY"
           else
             echo "::warning::RESEND_API_KEY is not set, so the form cannot send email yet."
           fi
       - name: Deploy the function
         if: steps.setup.outputs.ready == 'true'
-        run: supabase functions deploy contact --project-ref "$PROJECT_REF" --no-verify-jwt
+        run: supabase functions deploy contact --remote="$PROJECT_REF" --no-verify-jwt --use-api --yes
