@@ -7,7 +7,6 @@ import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import { Mail, Linkedin } from "lucide-react";
 import { Reveal } from "./Reveal";
-import { supabase } from "@/integrations/supabase/client";
 
 const schema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100),
@@ -17,6 +16,11 @@ const schema = z.object({
 });
 
 const CONTACT_EMAIL = "sander@trustifysports.com";
+
+// The Supabase Edge Function in supabase/functions/contact, which emails the
+// message to CONTACT_EMAIL through Resend. Set at build time (see
+// .github/workflows/deploy-site.yml); without it the form points people to email.
+const CONTACT_ENDPOINT = import.meta.env.VITE_CONTACT_ENDPOINT as string | undefined;
 
 export const Contact = () => {
   const [submitting, setSubmitting] = useState(false);
@@ -31,6 +35,12 @@ export const Contact = () => {
       organization: String(form.get("organization") || ""),
       message: String(form.get("message") || ""),
     };
+    // Hidden field only bots fill in: pretend it worked and send nothing.
+    if (String(form.get("company_website") || "")) {
+      toast.success("Thanks! Your message has been sent. We will get back to you shortly.");
+      formEl.reset();
+      return;
+    }
     const parsed = schema.safeParse(data);
     if (!parsed.success) {
       toast.error(parsed.error.errors[0].message);
@@ -39,37 +49,19 @@ export const Contact = () => {
 
     setSubmitting(true);
     try {
-      const id =
-        typeof crypto !== "undefined" && "randomUUID" in crypto
-          ? crypto.randomUUID()
-          : `${Date.now()}-${Math.random().toString(36).slice(2)}`;
-
-      // Send notification to internal inbox
-      const notify = await supabase.functions.invoke("send-transactional-email", {
-        body: {
-          templateName: "contact-notification",
-          recipientEmail: CONTACT_EMAIL,
-          idempotencyKey: `contact-notify-${id}`,
-          templateData: parsed.data,
-        },
+      if (!CONTACT_ENDPOINT) throw new Error("VITE_CONTACT_ENDPOINT is not set");
+      const res = await fetch(CONTACT_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(parsed.data),
       });
-      if (notify.error) throw notify.error;
-
-      // Send confirmation back to the sender
-      await supabase.functions.invoke("send-transactional-email", {
-        body: {
-          templateName: "contact-confirmation",
-          recipientEmail: parsed.data.email,
-          idempotencyKey: `contact-confirm-${id}`,
-          templateData: { name: parsed.data.name },
-        },
-      });
+      if (!res.ok) throw new Error(`Contact endpoint answered ${res.status}`);
 
       toast.success("Thanks! Your message has been sent. We will get back to you shortly.");
       formEl.reset();
     } catch (err) {
       console.error(err);
-      toast.error("Could not send message. Please try again or email us directly.");
+      toast.error(`Could not send message. Please try again or email ${CONTACT_EMAIL} directly.`);
     } finally {
       setSubmitting(false);
     }
@@ -108,6 +100,10 @@ export const Contact = () => {
             <div className="space-y-2">
               <Label htmlFor="message" className="text-on-light">Message</Label>
               <Textarea id="message" name="message" required maxLength={2000} rows={6} placeholder="Tell us a bit about what you're looking for." className="text-on-light placeholder:text-on-light-muted/60" />
+            </div>
+            <div className="absolute -left-[9999px] h-px w-px overflow-hidden" aria-hidden="true">
+              <label htmlFor="company_website">Leave this field empty</label>
+              <input id="company_website" name="company_website" type="text" tabIndex={-1} autoComplete="off" />
             </div>
             <Button type="submit" variant="gold" size="lg" disabled={submitting} className="w-full sm:w-auto">
               {submitting ? "Sending…" : "Send Message"}
