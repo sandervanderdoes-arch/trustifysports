@@ -1,0 +1,52 @@
+# Deploys the contact-form function (supabase/functions/contact) to Supabase
+# and stores its Resend key, whenever the function changes on main.
+# One-time setup (see CLAUDE.md): repository secrets SUPABASE_ACCESS_TOKEN and
+# RESEND_API_KEY.
+name: Deploy contact function
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "supabase/**"
+      - ".github/workflows/deploy-contact-function.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      PROJECT_REF: lvxzaydposdtqowicflm  # Supabase project trustify-sports
+    steps:
+      - name: Check setup
+        id: setup
+        run: |
+          if [ -z "$SUPABASE_ACCESS_TOKEN" ]; then
+            echo "::warning::SUPABASE_ACCESS_TOKEN is not set yet, so nothing was deployed."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+      - if: steps.setup.outputs.ready == 'true'
+        uses: actions/checkout@v4
+      - if: steps.setup.outputs.ready == 'true'
+        uses: supabase/setup-cli@v1
+        with:
+          version: latest
+      - name: Store the Resend key
+        if: steps.setup.outputs.ready == 'true'
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+        run: |
+          if [ -n "$RESEND_API_KEY" ]; then
+            supabase secrets set --project-ref "$PROJECT_REF" RESEND_API_KEY="$RESEND_API_KEY"
+          else
+            echo "::warning::RESEND_API_KEY is not set, so the form cannot send email yet."
+          fi
+      - name: Deploy the function
+        if: steps.setup.outputs.ready == 'true'
+        run: supabase functions deploy contact --project-ref "$PROJECT_REF" --no-verify-jwt

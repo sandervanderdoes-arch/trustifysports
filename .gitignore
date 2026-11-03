@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local settings (the site has no secrets; see .env.example)
+.env
+.env.*
+!.env.example
