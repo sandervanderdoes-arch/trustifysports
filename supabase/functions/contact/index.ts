@@ -1,10 +1,16 @@
 // Receives the website's contact form and emails it to Trustify Sports through
 // Resend. Deployed by .github/workflows/deploy-contact-function.yml.
 //
+// GET ?ping runs one tiny database query. A daily GitHub Action calls it
+// (.github/workflows/keep-supabase-awake.yml) so Supabase never pauses the free
+// project for lack of database activity.
+//
 // Secrets (set by that workflow):
 //   RESEND_API_KEY  required
 //   CONTACT_TO      optional, default sander@trustifysports.com
 //   CONTACT_FROM    optional, default "Trustify Sports website <website@trustifysports.com>"
+
+import postgres from "npm:postgres@3.4.9";
 
 const ALLOWED_ORIGINS = [
   "https://trustifysports.com",
@@ -35,6 +41,19 @@ const oneLine = (s: string) => s.replace(/[\r\n\t]+/g, " ").replace(/\p{Cc}/gu, 
 Deno.serve(async (req) => {
   const origin = req.headers.get("origin");
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders(origin) });
+  if (req.method === "GET" && new URL(req.url).searchParams.has("ping")) {
+    // SUPABASE_DB_URL is provided to every Edge Function by Supabase.
+    const sql = postgres(Deno.env.get("SUPABASE_DB_URL") ?? "", { max: 1, connect_timeout: 10 });
+    try {
+      await sql`select 1`;
+      return json(200, { ok: true }, origin);
+    } catch (err) {
+      console.error("Ping query failed", err);
+      return json(500, { error: "Database unreachable" }, origin);
+    } finally {
+      await sql.end({ timeout: 5 });
+    }
+  }
   if (req.method !== "POST") return json(405, { error: "Method not allowed" }, origin);
   if (origin && !ALLOWED_ORIGINS.includes(origin)) return json(403, { error: "Origin not allowed" }, origin);
 

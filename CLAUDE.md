@@ -39,10 +39,15 @@ Supabase secrets only.
 the sender as reply-to. `.github/workflows/deploy-contact-function.yml` deploys it when
 `supabase/**` changes.
 
-One-time setup (repository Settings → Secrets and variables → Actions):
-- variable `SUPABASE_PROJECT_REF`: the Supabase project's reference ID
-- secret `SUPABASE_ACCESS_TOKEN`: a Supabase personal access token
-- secret `RESEND_API_KEY`: a Resend API key for the verified domain trustifysports.com
+Supabase project: `trustify-sports` (reference `lvxzaydposdtqowicflm`, Central EU).
+`.github/workflows/keep-supabase-awake.yml` pings the function daily (`?ping`, which runs
+`select 1`) so the free project is never paused for inactivity.
+
+Repository secrets (Settings → Secrets and variables → Actions):
+- `SUPABASE_ACCESS_TOKEN`: scoped Supabase token for this project only (Edge Functions
+  read-write, Edge Function Secrets read-write, Project Settings read). Expires within a
+  year; Sander replaces it when it does.
+- `RESEND_API_KEY`: Resend API key with sending access for trustifysports.com
 
 ## Copy rules
 

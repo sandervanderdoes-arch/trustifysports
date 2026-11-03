@@ -1,6 +1,5 @@
-# Supabase CLI settings for this repo. The real project is chosen at deploy time
-# (--project-ref, from the SUPABASE_PROJECT_REF repository variable).
-project_id = "trustifysports"
+# Supabase CLI settings for this repo. Project: trustify-sports (lvxzaydposdtqowicflm).
+project_id = "lvxzaydposdtqowicflm"
 
 [functions.contact]
   # The website calls this function directly, without a Supabase login.

@@ -1,6 +1,5 @@
 # Builds the site and publishes it to GitHub Pages on every push to main.
-# One-time setup: Settings → Pages → Source: "GitHub Actions", and the
-# repository variable SUPABASE_PROJECT_REF (see CLAUDE.md).
+# One-time setup: Settings → Pages → Source: "GitHub Actions".
 name: Deploy site
 
 on:
@@ -30,7 +29,7 @@ jobs:
       - run: npm test
       - run: npm run build
         env:
-          VITE_CONTACT_ENDPOINT: ${{ vars.SUPABASE_PROJECT_REF && format('https://{0}.supabase.co/functions/v1/contact', vars.SUPABASE_PROJECT_REF) || '' }}
+          VITE_CONTACT_ENDPOINT: https://lvxzaydposdtqowicflm.supabase.co/functions/v1/contact
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
