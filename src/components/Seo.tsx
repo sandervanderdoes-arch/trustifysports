@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 
-const BASE = "https://football-trust-infra.lovable.app";
+const BASE = "https://trustifysports.com";
 
 export const Seo = ({ title, description, path, noindex }: { title: string; description: string; path: string; noindex?: boolean }) => (
   <Helmet>
