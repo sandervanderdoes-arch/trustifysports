@@ -63,45 +63,47 @@ export const Vision = () => (
       style={{ background: "radial-gradient(circle, hsl(var(--primary)) 0%, transparent 70%)" }}
       aria-hidden
     />
-    <div className="container-tight relative grid gap-14 lg:grid-cols-[1.15fr_1fr] lg:items-center">
-      <div>
-        <Reveal>
-          <div className="gold-rule mb-6" />
-          <p className="text-xs uppercase tracking-[0.2em] text-primary mb-4">Our ambition</p>
-          <h2 className="text-3xl lg:text-5xl leading-tight">
-            Building the compliance standard for <span className="text-primary italic">European football.</span>
-          </h2>
-          <p className="mt-6 text-lg text-muted-foreground font-light leading-relaxed">
-            In the long run we are building more than a platform: a connected ecosystem in which clubs
-            and agents work together on compliance.
-          </p>
-        </Reveal>
+    <div className="container-tight relative">
+      <Reveal>
+        <div className="gold-rule mb-6" />
+        <p className="text-xs uppercase tracking-[0.2em] text-primary mb-4">Our ambition</p>
+        <h2 className="text-3xl lg:text-5xl leading-tight">
+          Building the compliance standard for <span className="text-primary italic whitespace-nowrap">European football.</span>
+        </h2>
+        <p className="mt-6 text-lg text-muted-foreground font-light leading-relaxed">
+          <span className="block">In the long run we are building more than a platform:</span>
+          <span className="block">a connected ecosystem in which clubs and agents work together on compliance.</span>
+        </p>
+      </Reveal>
 
-        <div className="mt-10 grid gap-4 sm:grid-cols-2">
-          {goals.map((g, i) => (
-            <Reveal key={g.title} delay={i * 90}>
-              <article className="h-full p-5 rounded-lg border border-border bg-card/50 transition-all duration-300 hover:border-primary/40 hover:bg-card/80">
-                <div className="flex items-center gap-3 mb-2">
-                  <g.icon className="h-4 w-4 text-primary" aria-hidden />
-                  <h3 className="font-serif text-lg">{g.title}</h3>
-                </div>
-                <p className="text-sm text-muted-foreground leading-relaxed">{g.body}</p>
-              </article>
-            </Reveal>
-          ))}
+      <div className="mt-12 grid gap-14 lg:grid-cols-[1.15fr_1fr] lg:items-center">
+        <div>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {goals.map((g, i) => (
+              <Reveal key={g.title} delay={i * 90}>
+                <article className="h-full p-5 rounded-lg border border-border bg-card/50 transition-all duration-300 hover:border-primary/40 hover:bg-card/80">
+                  <div className="flex items-center gap-3 mb-2">
+                    <g.icon className="h-4 w-4 text-primary" aria-hidden />
+                    <h3 className="font-serif text-lg">{g.title}</h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{g.body}</p>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+
+          <Reveal delay={360}>
+            <p className="mt-6 flex items-center gap-2 text-sm text-muted-foreground">
+              <Lock className="h-4 w-4 text-primary shrink-0" aria-hidden />
+              Every client's data stays independent and confidential.
+            </p>
+          </Reveal>
         </div>
 
-        <Reveal delay={360}>
-          <p className="mt-6 flex items-center gap-2 text-sm text-muted-foreground">
-            <Lock className="h-4 w-4 text-primary shrink-0" aria-hidden />
-            Every client's data stays independent and confidential.
-          </p>
+        <Reveal delay={150}>
+          <EcosystemDiagram />
         </Reveal>
       </div>
-
-      <Reveal delay={150}>
-        <EcosystemDiagram />
-      </Reveal>
     </div>
   </section>
 );
