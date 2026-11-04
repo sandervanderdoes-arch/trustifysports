@@ -6,7 +6,7 @@ const founders = [
     initials: "AvW",
     name: "Alexander van der Does",
     title: "Co-Founder & CEO",
-    bio: "Alexander brings over 10 years of commercial experience from global brands including Red Bull and Heineken. He specializes in business development, partnerships, and building ventures from the ground up. He bridges European football expertise with a global commercial network.",
+    bio: "Alexander brings over 10 years of commercial experience from global brands including Red Bull and Beiersdorf. He specializes in business development, partnerships, and building ventures from the ground up. He bridges European football expertise with a global commercial network.",
     linkedin: "https://www.linkedin.com/in/alexander-van-der-does-de-willebois-5316447b/",
   },
   {
@@ -17,10 +17,10 @@ const founders = [
     linkedin: "https://www.linkedin.com/",
   },
   {
-    initials: "D",
+    initials: "DB",
     name: "Derk",
     title: "Co-Founder & CTO",
-    bio: "Derk leads the technology behind Trustify Sports, building the platform that turns regulatory obligations into clear, auditable workflows for clubs and agents.",
+    bio: "Derk is the former Global Head of Payment Solutions at Adyen, where he led product strategy and the launch of its in-store payment terminals, and scaled tech teams. At Trustify Sports he leads the technology, building the platform that turns regulatory obligations into clear, auditable workflows for clubs and agents.",
     linkedin: "",
   },
 ];
@@ -31,12 +31,13 @@ export const Founders = () => (
       <Reveal className="max-w-5xl mx-auto text-center">
         <div className="gold-rule mb-6 mx-auto" />
         <h2 className="text-3xl lg:text-5xl leading-tight text-on-light">The Team</h2>
+        <p className="mt-6 text-lg text-on-light-muted font-light">Dealmaking, compliance and technology.</p>
       </Reveal>
 
       <div className="mt-16 grid gap-8 md:grid-cols-3 max-w-6xl mx-auto">
         {founders.map((f, i) => (
           <Reveal key={f.name} delay={i * 120}>
-            <article className="bg-surface-light rounded-lg p-8 lg:p-10 border border-[hsl(var(--on-light-border))] h-full flex flex-col">
+            <article className="bg-surface-light rounded-lg p-8 lg:p-10 border border-[hsl(var(--on-light-border))] h-full flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-elegant)]">
               <div className="flex items-center gap-5">
                 <div
                   className="h-20 w-20 rounded-full flex items-center justify-center font-serif text-xl text-primary-foreground border-2 border-primary/30"

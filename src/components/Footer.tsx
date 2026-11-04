@@ -3,7 +3,8 @@ import { Logo } from "./Logo";
 
 const links = [
   { href: "#about", label: "About" },
-  { href: "#how", label: "How It Works" },
+  { href: "#how", label: "How We Help" },
+  { href: "#vision", label: "Vision" },
   { href: "#founders", label: "Team" },
   { href: "#contact", label: "Contact" },
 ];
@@ -15,7 +16,7 @@ export const Footer = () => (
         <div>
           <Logo />
           <p className="mt-4 text-sm text-muted-foreground max-w-xs leading-relaxed">
-            Compliance Infrastructure for Professional Football
+            Building the compliance standard for European football.
           </p>
         </div>
 

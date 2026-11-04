@@ -1,58 +1,36 @@
+import { Button } from "@/components/ui/button";
 import { Reveal } from "./Reveal";
-import { Flag, Compass, Wrench, ShieldCheck } from "lucide-react";
+import { Landmark, Wrench, PlayCircle, Flag } from "lucide-react";
 
+// "Set in law" dates come from Regulation (EU) 2024/1624; "Recommended" steps are our advice.
 const milestones = [
   {
-    year: "2026",
-    label: "Foundation",
-    icon: Compass,
-    title: "Assess & Align",
-    body:
-      "Map exposure across transfers, ownership, and agent relationships. Establish governance ownership and a board-level compliance mandate.",
-    actions: [
-      "Conduct AML risk assessment",
-      "Appoint compliance lead",
-      "Define internal policies",
-    ],
-  },
-  {
     year: "2027",
-    label: "Build",
-    icon: Wrench,
-    title: "Implement Infrastructure",
-    body:
-      "From 10 July 2027 the AMLR applies to banks and financial counterparties, and new beneficial-ownership rules take effect. Expect due-diligence requests from your banks and lenders. Deploy due diligence, monitoring and reporting workflows built for football.",
-    actions: [
-      "Onboard KYC tooling",
-      "Operationalize monitoring",
-      "Train staff & stakeholders",
-    ],
+    tag: "Set in law",
+    icon: Landmark,
+    title: "Banks first",
+    body: "From 10 July 2027 the AMLR applies to banks and other financial firms, and new beneficial-ownership rules take effect. Expect questions from the banks that finance you.",
   },
   {
     year: "2028",
-    label: "Validate",
-    icon: ShieldCheck,
-    title: "Test & Audit",
-    body:
-      "Independent assurance on controls, evidence trails, and reporting pipelines. Remediate gaps before your obligations apply.",
-    actions: [
-      "Independent control review",
-      "Mock regulatory reporting",
-      "Close remediation items",
-    ],
+    tag: "Recommended",
+    icon: Wrench,
+    title: "Design and test",
+    body: "Map your processes, configure the system and test it on past deals.",
   },
   {
-    year: "2029",
-    label: "Obligations Apply",
+    year: "Jan 2029",
+    tag: "Recommended",
+    icon: PlayCircle,
+    title: "Live test run",
+    body: "The system runs alongside your current processes, so your first assessed year is fully on record.",
+  },
+  {
+    year: "10 Jul 2029",
+    tag: "Set in law",
     icon: Flag,
-    title: "10 July 2029",
-    body:
-      "AMLR obligations apply to professional football clubs and football agents, supervised by national AML supervisors. Compliant organisations operate with confidence; latecomers face compressed timelines and scrutiny.",
-    actions: [
-      "Continuous monitoring",
-      "Supervisor engagement",
-      "Ongoing assurance",
-    ],
+    title: "Obligations apply",
+    body: "Clubs and agents must screen, document and monitor, supervised by their national AML supervisor.",
   },
 ];
 
@@ -66,7 +44,7 @@ export const Timeline = () => (
           The Road to <span className="text-primary italic">10 July 2029</span>
         </h2>
         <p className="mt-6 text-muted-foreground leading-relaxed">
-          A readiness path for clubs and agents preparing for the AMLR.
+          What the law sets, and how we recommend clubs and agents prepare.
         </p>
       </Reveal>
 
@@ -83,35 +61,29 @@ export const Timeline = () => (
         <div className="grid gap-6 lg:gap-8 lg:grid-cols-4">
           {milestones.map((m, i) => (
             <Reveal key={m.year} delay={i * 100}>
-              <article className="relative h-full p-6 lg:p-7 rounded-lg border border-border bg-card/60 backdrop-blur-sm hover:border-primary/40 transition-colors">
+              <article className="relative h-full p-6 lg:p-7 rounded-lg border border-border bg-card/60 backdrop-blur-sm transition-all duration-300 hover:border-primary/40 hover:-translate-y-1">
                 <div className="flex items-center justify-between mb-5">
                   <div className="h-10 w-10 rounded-md flex items-center justify-center bg-primary/10 border border-primary/20">
                     <m.icon className="h-4 w-4 text-primary" />
                   </div>
-                  <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-                    {m.label}
+                  <span
+                    className={`text-[10px] uppercase tracking-[0.18em] px-2 py-1 rounded-full border ${
+                      m.tag === "Set in law"
+                        ? "border-primary/60 text-primary"
+                        : "border-border text-muted-foreground"
+                    }`}
+                  >
+                    {m.tag}
                   </span>
                 </div>
 
-                <div className="font-serif text-3xl text-primary mb-1">
+                <div className="font-serif text-2xl lg:text-3xl text-primary mb-1 whitespace-nowrap">
                   {m.year}
                 </div>
                 <h3 className="font-serif text-lg mb-3">{m.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-5">
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   {m.body}
                 </p>
-
-                <ul className="space-y-2 pt-4 border-t border-border/60">
-                  {m.actions.map((a) => (
-                    <li
-                      key={a}
-                      className="flex items-start gap-2 text-xs text-muted-foreground"
-                    >
-                      <span className="text-primary mt-1.5 h-1 w-1 rounded-full bg-primary shrink-0" />
-                      <span>{a}</span>
-                    </li>
-                  ))}
-                </ul>
               </article>
             </Reveal>
           ))}
@@ -126,12 +98,9 @@ export const Timeline = () => (
             you scope the work, sequence priorities, and build a defensible plan
             for your board.
           </p>
-          <a
-            href="#contact"
-            className="text-sm font-medium text-primary hover:text-primary/80 transition-colors whitespace-nowrap"
-          >
-            Start your readiness assessment →
-          </a>
+          <Button asChild variant="onDark" className="shrink-0">
+            <a href="#contact">Start your readiness assessment</a>
+          </Button>
         </div>
       </Reveal>
     </div>

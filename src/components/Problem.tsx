@@ -1,4 +1,4 @@
-import { Landmark, ClipboardList, AlertTriangle } from "lucide-react";
+import { Landmark, ClipboardList, AlertTriangle, CalendarClock } from "lucide-react";
 import { Reveal } from "./Reveal";
 
 const items = [
@@ -15,7 +15,7 @@ const items = [
   {
     icon: AlertTriangle,
     title: "Legal and Sporting Risk",
-    body: "Supervisors assess the file, not the intention. Gaps mean supervisory sanctions and reputational damage, and incomplete ownership disclosure already carries sporting consequences under UEFA licensing.",
+    body: "Supervisors assess the file, not the intention. Fines for serious breaches can reach €1 million or more, alongside reputational damage, and incomplete ownership disclosure already carries sporting consequences under UEFA licensing.",
   },
 ];
 
@@ -33,7 +33,7 @@ export const Problem = () => (
       <div className="mt-16 grid gap-6 md:grid-cols-3">
         {items.map((it, i) => (
           <Reveal key={it.title} delay={i * 100}>
-            <article className="h-full p-8 rounded-lg border border-border bg-card/60 backdrop-blur-sm hover:border-primary/40 transition-colors">
+            <article className="h-full p-8 rounded-lg border border-border bg-card/60 backdrop-blur-sm transition-all duration-300 hover:border-primary/40 hover:-translate-y-1">
               <div className="h-12 w-12 rounded-md flex items-center justify-center bg-primary/10 border border-primary/20 mb-6">
                 <it.icon className="h-5 w-5 text-primary" />
               </div>
@@ -47,13 +47,13 @@ export const Problem = () => (
       <Reveal delay={150}>
         <div className="mt-10 p-8 lg:p-10 rounded-lg border border-primary/30 bg-primary/5 flex flex-col md:flex-row gap-6 md:items-center">
           <div className="flex items-center gap-4 md:w-1/3">
-            <div className="h-12 w-12 rounded-md flex items-center justify-center bg-primary/10 border border-primary/20 shrink-0 text-xl">
-              🗓️
+            <div className="h-12 w-12 rounded-md flex items-center justify-center bg-primary/10 border border-primary/20 shrink-0">
+              <CalendarClock className="h-5 w-5 text-primary" />
             </div>
             <h3 className="font-serif text-xl">The Clock is Ticking</h3>
           </div>
           <p className="text-sm text-muted-foreground leading-relaxed md:w-2/3">
-            AMLR obligations for clubs and agents apply from <span className="text-primary font-medium">10 July 2029</span>. But your banks, lenders and payment providers are obliged from <span className="text-foreground font-medium">10 July 2027</span>, and they will ask for ownership chains and source of funds well before 2029. The time to build is now.
+            AMLR obligations for clubs and agents apply from <span className="text-primary font-medium">10 July 2029</span>. But your banks, lenders and payment providers are obliged from <span className="text-foreground font-medium">10 July 2027</span>, and they will ask for ownership chains and source of funds well before 2029. And 2029 is the first year supervisors assess: records cannot be backfilled, so your system should run from January 2029. The time to build is now.
           </p>
         </div>
       </Reveal>

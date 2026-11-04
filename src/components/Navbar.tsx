@@ -5,7 +5,8 @@ import { Menu, X } from "lucide-react";
 
 const links = [
   { href: "#about", label: "About" },
-  { href: "#how", label: "How It Works" },
+  { href: "#how", label: "How We Help" },
+  { href: "#vision", label: "Vision" },
   { href: "#founders", label: "Team" },
 ];
 
@@ -24,7 +25,7 @@ export const Navbar = () => {
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-background/70 backdrop-blur-md border-b border-border/60"
+          ? "bg-white/95 backdrop-blur-md border-b border-border/60 shadow-[var(--shadow-card)]"
           : "bg-transparent"
       }`}
     >

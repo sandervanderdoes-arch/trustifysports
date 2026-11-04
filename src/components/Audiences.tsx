@@ -1,4 +1,4 @@
-import { Shield, Handshake, Check } from "lucide-react";
+import { Shield, Handshake, Check, Info } from "lucide-react";
 import { Reveal } from "./Reveal";
 
 const audiences = [
@@ -13,6 +13,8 @@ const audiences = [
       "Beneficial-ownership and control mapping, with sanctions and PEP screening",
       "Transaction monitoring with a reporting workflow. Trustify prepares the file, your club files",
     ],
+    note:
+      "A check applies to every business relationship, and to one-off transactions of €10,000 or more (linked payments count together). Ticketing, merchandise, media rights and ordinary supplier and staff payments are out of scope.",
     accent: "left",
   },
   {
@@ -27,6 +29,7 @@ const audiences = [
       "Monitoring and a reporting workflow",
       "Readiness for 10 July 2029",
     ],
+    note: "Covers mandates, commissions, transfers and sub-agent arrangements, whoever pays the fee.",
     accent: "right",
   },
 ];
@@ -102,6 +105,11 @@ export const Audiences = () => (
                   </li>
                 ))}
               </ul>
+
+              <p className="mt-6 flex items-start gap-2 rounded-md bg-[hsl(var(--surface-muted))] px-4 py-3 text-xs text-on-light-muted leading-relaxed">
+                <Info className="h-3.5 w-3.5 mt-0.5 shrink-0 text-primary" aria-hidden />
+                <span>{a.note}</span>
+              </p>
             </article>
           </Reveal>
         ))}
@@ -109,8 +117,8 @@ export const Audiences = () => (
 
       <Reveal delay={240}>
         <p className="mt-14 text-center font-serif text-xl lg:text-2xl text-on-light max-w-3xl mx-auto leading-snug">
-          Whether you're a club or an agent, compliance is no longer optional.{" "}
-          <span className="text-primary italic">We make it manageable.</span>
+          We make compliance simple, so you can focus on what really matters:{" "}
+          <span className="text-primary italic">football.</span>
         </p>
       </Reveal>
     </div>

@@ -22,7 +22,7 @@ Supabase secrets only.
 ## Layout
 
 - `src/pages/Index.tsx`: section order. Sections are in `src/components/` (Hero, Problem,
-  Solution, Audiences, Approach, Founders, WhyUs, Timeline, Partners, FoundingPartner,
+  Solution, Audiences, Approach, Vision, Founders, WhyUs, Timeline, Partners, FoundingPartner,
   Contact, Footer). `src/pages/Privacy.tsx` is the privacy notice.
 - `src/components/Seo.tsx`: per-page title, description and canonical URL (base
   `https://trustifysports.com`). `index.html` holds the Organization structured data and a

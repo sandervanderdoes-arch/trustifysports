@@ -1,16 +1,21 @@
-import { TrendingUp, Target, Handshake, Award, Globe2 } from "lucide-react";
+import { Scale, Goal, Sparkles, Handshake, Award, Globe2 } from "lucide-react";
 import { Reveal } from "./Reveal";
 
 const reasons = [
   {
-    icon: TrendingUp,
+    icon: Scale,
     title: "The Rules Are Written",
-    body: "The AMLR was published in 2024, AMLA is finalising the technical standards, and clubs and agents have until 10 July 2029. Building and evidencing a compliance programme takes most organisations 18 to 24 months.",
+    body: "The AMLR has been law since June 2024. In October 2026 AMLA sent its final draft due-diligence standards to the European Commission, after consulting on how supervisors will rate clubs and agents. A compliance programme takes most organisations 18 to 24 months to build.",
   },
   {
-    icon: Target,
-    title: "Sector-Specific Expertise",
-    body: "We don't come from generic compliance consulting. We understand football's commercial structures, timelines, and stakeholders.",
+    icon: Goal,
+    title: "Built for Football Deals",
+    body: "Transfers, loans, sell-ons, add-ons and agent fees, modelled as football deals really work, with every fee tested against comparable deals.",
+  },
+  {
+    icon: Sparkles,
+    title: "Simple Enough for Every Club",
+    body: "Designed to be run by your own people, without building a compliance department.",
   },
   {
     icon: Handshake,
@@ -20,7 +25,7 @@ const reasons = [
   {
     icon: Award,
     title: "Official Partner of Pro Agent",
-    body: "Trustify Sports is proud to be an official partner of Pro Agent, strengthening our position at the heart of the professional football ecosystem.",
+    body: "Trustify Sports is an official partner of Pro Agent, at the heart of the professional football ecosystem.",
   },
   {
     icon: Globe2,
@@ -40,17 +45,15 @@ export const WhyUs = () => (
         </h2>
       </Reveal>
 
-      <div className="mt-16 space-y-4">
+      <div className="mt-16 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
         {reasons.map((r, i) => (
-          <Reveal key={r.title} delay={i * 100}>
-            <article className="group p-8 lg:p-10 rounded-lg border border-border bg-card/50 hover:bg-card/80 hover:border-primary/40 transition-all flex flex-col md:flex-row md:items-center gap-6">
-              <div className="flex items-center gap-4 md:w-1/3">
-                <div className="h-12 w-12 rounded-md flex items-center justify-center bg-primary/10 border border-primary/20 shrink-0">
-                  <r.icon className="h-5 w-5 text-primary" />
-                </div>
-                <h3 className="font-serif text-xl">{r.title}</h3>
+          <Reveal key={r.title} delay={(i % 3) * 100}>
+            <article className="group h-full p-7 rounded-lg border border-border bg-card/50 transition-all duration-300 hover:bg-card/80 hover:border-primary/40 hover:-translate-y-1">
+              <div className="h-11 w-11 rounded-md flex items-center justify-center bg-primary/10 border border-primary/20 mb-5 transition-colors duration-300 group-hover:bg-primary/20">
+                <r.icon className="h-5 w-5 text-primary" />
               </div>
-              <p className="text-sm text-muted-foreground leading-relaxed md:w-2/3">{r.body}</p>
+              <h3 className="font-serif text-xl mb-3">{r.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{r.body}</p>
             </article>
           </Reveal>
         ))}

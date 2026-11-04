@@ -28,17 +28,17 @@ export const Solution = () => (
           What Trustify Sports Does
         </h2>
         <p className="mt-6 text-lg text-on-light-muted leading-relaxed">
-          Trustify Sports provides the compliance infrastructure that football organizations need
-          to meet European AML requirements without building it themselves. We handle the complexity
-          so clubs and agents can stay focused on performance.
+          One partner for AML compliance: a platform built for football, compliance experts who guide
+          your implementation, and support that continues after go-live. So you meet the 2029 rules
+          without building a compliance department.
         </p>
       </Reveal>
 
       <div className="mt-16 grid gap-px md:grid-cols-3 bg-[hsl(var(--on-light-border))] border border-[hsl(var(--on-light-border))] rounded-lg overflow-hidden">
         {features.map((f, i) => (
           <Reveal key={f.title} delay={i * 100}>
-            <article className="h-full p-8 lg:p-10 bg-surface-light">
-              <div className="h-11 w-11 rounded-md flex items-center justify-center bg-primary/10 border border-primary/30 mb-6">
+            <article className="group h-full p-8 lg:p-10 bg-surface-light transition-colors duration-300 hover:bg-white">
+              <div className="h-11 w-11 rounded-md flex items-center justify-center bg-primary/10 border border-primary/30 mb-6 transition-colors duration-300 group-hover:bg-primary group-hover:[&>svg]:text-primary-foreground">
                 <f.icon className="h-5 w-5 text-primary" />
               </div>
               <h3 className="font-serif text-xl mb-3 text-on-light">{f.title}</h3>
@@ -47,6 +47,13 @@ export const Solution = () => (
           </Reveal>
         ))}
       </div>
+
+      <Reveal delay={200}>
+        <p className="mt-12 text-center font-serif text-xl lg:text-2xl text-on-light leading-snug">
+          Not just a software vendor.{" "}
+          <span className="text-primary italic">A long-term compliance partner for football.</span>
+        </p>
+      </Reveal>
     </div>
   </section>
 );

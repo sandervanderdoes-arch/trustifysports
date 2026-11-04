@@ -6,6 +6,7 @@ import { Problem } from "@/components/Problem";
 import { Solution } from "@/components/Solution";
 import { Audiences } from "@/components/Audiences";
 import { Approach } from "@/components/Approach";
+import { Vision } from "@/components/Vision";
 import { Founders } from "@/components/Founders";
 import { WhyUs } from "@/components/WhyUs";
 import { Timeline } from "@/components/Timeline";
@@ -23,6 +24,7 @@ const Index = () => {
       <Solution />
       <Audiences />
       <Approach />
+      <Vision />
       <Founders />
       <WhyUs />
       <Timeline />

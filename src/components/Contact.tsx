@@ -74,7 +74,7 @@ export const Contact = () => {
           <div className="gold-rule mx-auto mb-6" />
           <h2 className="text-3xl lg:text-5xl leading-tight text-on-light">Let's Talk</h2>
           <p className="mt-5 text-lg text-on-light-muted">
-            Whether you're a club, federation, investor, or potential partner, we'd like to hear from you.
+            Whether you're a club, an agent, an investor or a potential partner, we'd like to hear from you.
           </p>
         </Reveal>
 
@@ -95,7 +95,7 @@ export const Contact = () => {
             </div>
             <div className="space-y-2">
               <Label htmlFor="organization" className="text-on-light">Organization</Label>
-              <Input id="organization" name="organization" required maxLength={150} placeholder="Club, federation, fund…" className="text-on-light placeholder:text-on-light-muted/60" />
+              <Input id="organization" name="organization" required maxLength={150} placeholder="Club, agency, fund…" className="text-on-light placeholder:text-on-light-muted/60" />
             </div>
             <div className="space-y-2">
               <Label htmlFor="message" className="text-on-light">Message</Label>
