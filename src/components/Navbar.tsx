@@ -5,7 +5,7 @@ import { Menu, X } from "lucide-react";
 
 const links = [
   { href: "#about", label: "About" },
-  { href: "#how", label: "How We Help" },
+  { href: "#how", label: "How we help" },
   { href: "#vision", label: "Vision" },
   { href: "#founders", label: "Team" },
 ];
@@ -47,7 +47,7 @@ export const Navbar = () => {
             </a>
           ))}
           <Button asChild variant={scrolled ? "gold" : "onDark"} size="sm">
-            <a href="#contact">Get in Touch</a>
+            <a href="#contact">Get in touch</a>
           </Button>
         </div>
 
@@ -74,7 +74,7 @@ export const Navbar = () => {
               </a>
             ))}
             <Button asChild variant="gold" size="sm" className="self-start">
-              <a href="#contact" onClick={() => setOpen(false)}>Get in Touch</a>
+              <a href="#contact" onClick={() => setOpen(false)}>Get in touch</a>
             </Button>
           </div>
         </div>

@@ -59,7 +59,7 @@ export const Approach = () => (
       <Reveal className="max-w-5xl mx-auto text-center">
         <div className="gold-rule mx-auto mb-6" />
         <h2 className="text-3xl lg:text-5xl leading-tight max-w-5xl mx-auto">
-          Built With the Industry. <span className="text-primary italic whitespace-nowrap">For&nbsp;the&nbsp;Industry.</span>
+          Built with the industry. <span className="text-primary italic whitespace-nowrap">For&nbsp;the&nbsp;industry.</span>
         </h2>
       </Reveal>
 

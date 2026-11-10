@@ -15,7 +15,7 @@ export const FoundingPartner = () => (
     <div className="container-tight relative">
       <Reveal className="max-w-5xl mx-auto text-center">
         <div className="gold-rule mb-6 mx-auto" />
-        <h2 className="text-3xl lg:text-5xl leading-tight">Become a Founding Partner</h2>
+        <h2 className="text-3xl lg:text-5xl leading-tight">Become a founding partner</h2>
         <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
           We are working with a small group of clubs and agents to shape the platform ahead of
           10 July 2029. In 2027 we build it together through discovery workshops; founding partners

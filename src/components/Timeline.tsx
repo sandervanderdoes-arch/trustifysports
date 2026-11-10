@@ -41,7 +41,7 @@ export const Timeline = () => (
       <Reveal className="max-w-5xl mx-auto text-center">
         <div className="gold-rule mb-6 mx-auto" />
         <h2 className="text-3xl lg:text-5xl leading-tight">
-          The Road to <span className="text-primary italic">10 July 2029</span>
+          The road to <span className="text-primary italic">10 July 2029</span>
         </h2>
         <p className="mt-6 text-muted-foreground leading-relaxed">
           What the law sets, and how we recommend clubs and agents prepare.

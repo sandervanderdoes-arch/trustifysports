@@ -41,8 +41,8 @@ export const Hero = () => (
 
       <Reveal delay={80}>
         <h1 className="font-serif leading-[1.05] hero-headline">
-          <span className="block whitespace-nowrap">Compliance Infrastructure</span>
-          <span className="block whitespace-nowrap"><span className="text-foreground">Built for</span>{" "}<span className="text-primary italic">Professional Football</span></span>
+          <span className="block whitespace-nowrap">Compliance infrastructure</span>
+          <span className="block whitespace-nowrap"><span className="text-foreground">built for</span>{" "}<span className="text-primary italic">professional football</span></span>
         </h1>
       </Reveal>
 

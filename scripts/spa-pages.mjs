@@ -10,7 +10,7 @@ const index = await fs.readFile(path.join(dist, "index.html"), "utf8");
 const routes = [
   {
     path: "privacy",
-    title: "Privacy Notice | Trustify Sports",
+    title: "Privacy notice | Trustify Sports",
     description:
       "How Trustify Sports collects, uses and protects personal data submitted through our website, in line with the EU GDPR.",
   },

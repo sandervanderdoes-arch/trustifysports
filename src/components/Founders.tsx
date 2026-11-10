@@ -5,21 +5,21 @@ const founders = [
   {
     initials: "AvW",
     name: "Alexander van der Does",
-    title: "Co-Founder & CEO",
+    title: "Co-founder & CEO",
     bio: "Alexander brings over 10 years of commercial experience from global brands including Red Bull and Beiersdorf. He specializes in business development, partnerships, and building ventures from the ground up. He bridges European football expertise with a global commercial network.",
     linkedin: "https://www.linkedin.com/in/alexander-van-der-does-de-willebois-5316447b/",
   },
   {
     initials: "PT",
     name: "Philip",
-    title: "Co-Founder · Compliance",
+    title: "Co-founder · Compliance",
     bio: "Philip is a compliance and forensic expert with a background at a Big 4 consulting firm, where he specialized in financial crime, AML frameworks, and regulatory investigations. He brings deep technical expertise in the exact regulatory landscape that Trustify Sports was built to navigate.",
     linkedin: "https://www.linkedin.com/",
   },
   {
     initials: "DB",
     name: "Derk",
-    title: "Co-Founder & CTO",
+    title: "Co-founder & CTO",
     bio: "Derk is the former Global Head of Payment Solutions at Adyen, where he led product strategy and the launch of its in-store payment terminals, and scaled tech teams. At Trustify Sports he leads the technology, building the platform that turns regulatory obligations into clear, auditable workflows for clubs and agents.",
     linkedin: "",
   },
@@ -30,7 +30,7 @@ export const Founders = () => (
     <div className="container-tight">
       <Reveal className="max-w-5xl mx-auto text-center">
         <div className="gold-rule mb-6 mx-auto" />
-        <h2 className="text-3xl lg:text-5xl leading-tight text-on-light">The Team</h2>
+        <h2 className="text-3xl lg:text-5xl leading-tight text-on-light">The team</h2>
         <p className="mt-6 text-lg text-on-light-muted font-light">Dealmaking, compliance and technology.</p>
       </Reveal>
 

@@ -4,17 +4,17 @@ import { Reveal } from "./Reveal";
 const items = [
   {
     icon: Landmark,
-    title: "Football Is Now in Scope",
+    title: "Football is now in scope",
     body: "Regulation (EU) 2024/1624 names professional football clubs and football agents as obliged entities. Customer due diligence, beneficial-ownership checks, monitoring and suspicious-transaction reporting now apply directly to football.",
   },
   {
     icon: ClipboardList,
-    title: "Bank-Grade Standards, No Bank-Grade Infrastructure",
+    title: "Bank-grade standards, no bank-grade infrastructure",
     body: "Clubs and agents must produce the same evidence a bank would: documented risk assessments, verified owners, auditable decisions. Yet they have little in-house infrastructure to do it.",
   },
   {
     icon: AlertTriangle,
-    title: "Legal and Sporting Risk",
+    title: "Legal and sporting risk",
     body: "Supervisors assess the file, not the intention. Fines for serious breaches can reach €1 million or more, alongside reputational damage, and incomplete ownership disclosure already carries sporting consequences under UEFA licensing.",
   },
 ];
@@ -26,7 +26,7 @@ export const Problem = () => (
       <Reveal className="max-w-5xl mx-auto text-center">
         <div className="gold-rule mb-6 mx-auto" />
         <h2 className="text-3xl lg:text-5xl leading-tight">
-          The Regulatory Challenge Facing Football
+          The regulatory challenge facing football
         </h2>
       </Reveal>
 
@@ -50,7 +50,7 @@ export const Problem = () => (
             <div className="h-12 w-12 rounded-md flex items-center justify-center bg-primary/10 border border-primary/20 shrink-0">
               <CalendarClock className="h-5 w-5 text-primary" />
             </div>
-            <h3 className="font-serif text-xl">The Clock is Ticking</h3>
+            <h3 className="font-serif text-xl">The clock is ticking</h3>
           </div>
           <p className="text-sm text-muted-foreground leading-relaxed md:w-2/3">
             AMLR obligations for clubs and agents apply from <span className="text-primary font-medium">10 July 2029</span>. But your banks, lenders and payment providers are obliged from <span className="text-foreground font-medium">10 July 2027</span>, and they will ask for ownership chains and source of funds well before 2029. And 2029 is the first year supervisors assess: records cannot be backfilled, so your system should run from January 2029. The time to build is now.

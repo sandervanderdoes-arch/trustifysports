@@ -4,17 +4,17 @@ import { Reveal } from "./Reveal";
 const features = [
   {
     icon: Activity,
-    title: "Regulatory Intelligence",
+    title: "Regulatory intelligence",
     body: "Structured, versioned guidance on the AMLR, AMLA's technical standards and national implementation, mapped to football transactions.",
   },
   {
     icon: Workflow,
-    title: "Compliance Workflows",
+    title: "Compliance workflows",
     body: "Purpose-built processes and tooling designed around the specific structures and timelines of professional football.",
   },
   {
     icon: LifeBuoy,
-    title: "Ongoing Support",
+    title: "Ongoing support",
     body: "We don't just deliver a product. We work alongside your organization as a long-term compliance partner.",
   },
 ];
@@ -25,7 +25,7 @@ export const Solution = () => (
       <Reveal className="max-w-5xl mx-auto text-center">
         <div className="gold-rule mb-6 mx-auto" />
         <h2 className="text-3xl lg:text-5xl leading-tight text-on-light">
-          What Trustify Sports Does
+          What Trustify Sports does
         </h2>
         <p className="mt-6 text-lg text-on-light-muted leading-relaxed">
           One partner for AML compliance: a platform built for football, compliance experts who guide

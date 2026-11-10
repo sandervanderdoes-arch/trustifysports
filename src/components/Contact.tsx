@@ -72,7 +72,7 @@ export const Contact = () => {
       <div className="container-narrow">
         <Reveal className="text-center">
           <div className="gold-rule mx-auto mb-6" />
-          <h2 className="text-3xl lg:text-5xl leading-tight text-on-light">Let's Talk</h2>
+          <h2 className="text-3xl lg:text-5xl leading-tight text-on-light">Let's talk</h2>
           <p className="mt-5 text-lg text-on-light-muted">
             Whether you're a club, an agent, an investor or a potential partner, we'd like to hear from you.
           </p>
@@ -106,11 +106,11 @@ export const Contact = () => {
               <input id="company_website" name="company_website" type="text" tabIndex={-1} autoComplete="off" />
             </div>
             <Button type="submit" variant="gold" size="lg" disabled={submitting} className="w-full sm:w-auto">
-              {submitting ? "Sending…" : "Send Message"}
+              {submitting ? "Sending…" : "Send message"}
             </Button>
             <p className="text-xs text-on-light-muted">
               We use your details only to respond to your message. See our{" "}
-              <a href="/privacy" className="underline hover:text-primary">Privacy Notice</a>.
+              <a href="/privacy" className="underline hover:text-primary">Privacy notice</a>.
             </p>
           </form>
         </Reveal>

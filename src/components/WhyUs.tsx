@@ -41,7 +41,7 @@ export const WhyUs = () => (
       <Reveal className="max-w-5xl mx-auto text-center">
         <div className="gold-rule mb-6 mx-auto" />
         <h2 className="text-3xl lg:text-5xl leading-tight">
-          Why Now. <span className="text-primary italic">Why Us.</span>
+          Why now. <span className="text-primary italic">Why us.</span>
         </h2>
       </Reveal>
 

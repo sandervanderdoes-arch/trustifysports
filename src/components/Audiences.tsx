@@ -4,8 +4,8 @@ import { Reveal } from "./Reveal";
 const audiences = [
   {
     icon: Shield,
-    eyebrow: "Football Clubs",
-    title: "For Football Clubs",
+    eyebrow: "Football clubs",
+    title: "For football clubs",
     body:
       "Clubs are obliged for four types of transaction: with investors, with sponsors and advertisers, with agents and other intermediaries, and in player transfers. Trustify maps your exposure across all four and builds the workflows and evidence your supervisor will expect.",
     bullets: [
@@ -19,8 +19,8 @@ const audiences = [
   },
   {
     icon: Handshake,
-    eyebrow: "Player Agents",
-    title: "For Player Agents",
+    eyebrow: "Player agents",
+    title: "For player agents",
     body:
       "From 10 July 2029, every football agent is an obliged entity under the AMLR, regardless of size, with no exemption. A one-person agency carries the same obligations, applied proportionately to its risk.",
     bullets: [
@@ -44,7 +44,7 @@ export const Audiences = () => (
       <Reveal className="max-w-5xl mx-auto text-center">
         <div className="gold-rule mb-6 mx-auto" />
         <h2 className="text-on-light text-3xl lg:text-5xl leading-tight">
-          Built for Every Corner of the Game
+          Built for every corner of the game
         </h2>
         <p className="text-on-light-muted mt-6 text-lg font-light leading-relaxed">
           Compliance obligations differ across the football ecosystem.
