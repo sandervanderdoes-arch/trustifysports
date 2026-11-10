@@ -56,7 +56,7 @@ const EcosystemDiagram = () => (
 );
 
 export const Vision = () => (
-  <section id="vision" className="on-navy py-24 lg:py-32 bg-surface-deep relative overflow-hidden">
+  <section id="vision" className="on-navy py-16 lg:py-20 bg-surface-deep relative overflow-hidden">
     <div className="absolute inset-0 bg-grid opacity-30" aria-hidden />
     <div
       className="absolute -bottom-40 right-0 h-[420px] w-[620px] rounded-full opacity-20 blur-3xl"
@@ -68,7 +68,7 @@ export const Vision = () => (
         <div className="gold-rule mb-6" />
         <p className="text-xs uppercase tracking-[0.2em] text-primary mb-4">Our ambition</p>
         <h2 className="text-3xl lg:text-5xl leading-tight">
-          Building the compliance standard for <span className="text-primary italic whitespace-nowrap">European football.</span>
+          Building the compliance standard for <span className="text-primary italic whitespace-nowrap">European Football</span>
         </h2>
         <p className="mt-6 text-lg text-muted-foreground font-light leading-relaxed">
           <span className="block">In the long run we are building more than a platform:</span>

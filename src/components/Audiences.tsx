@@ -37,14 +37,14 @@ const audiences = [
 export const Audiences = () => (
   <section
     id="who-we-serve"
-    className="py-24 lg:py-32"
+    className="py-16 lg:py-20"
     style={{ background: "hsl(var(--surface-muted))" }}
   >
     <div className="container-tight">
       <Reveal className="max-w-5xl mx-auto text-center">
         <div className="gold-rule mb-6 mx-auto" />
         <h2 className="text-on-light text-3xl lg:text-5xl leading-tight">
-          Built for every corner of the game
+          Built for every corner of the Game
         </h2>
         <p className="text-on-light-muted mt-6 text-lg font-light leading-relaxed">
           Compliance obligations differ across the football ecosystem.
@@ -52,7 +52,7 @@ export const Audiences = () => (
         </p>
       </Reveal>
 
-      <div className="mt-16 grid gap-8 lg:gap-10 md:grid-cols-2 relative">
+      <div className="mt-12 grid gap-8 lg:gap-10 md:grid-cols-2 relative">
         {/* Vertical divider on desktop */}
         <div
           className="hidden md:block absolute top-8 bottom-8 left-1/2 w-px"
@@ -66,11 +66,7 @@ export const Audiences = () => (
         {audiences.map((a, i) => (
           <Reveal key={a.title} delay={i * 120}>
             <article
-              className={`relative h-full p-8 lg:p-10 rounded-lg bg-white border border-[hsl(var(--on-light-border))] shadow-[var(--shadow-card)] transition-all hover:shadow-[var(--shadow-elegant)] hover:-translate-y-0.5 ${
-                a.accent === "left"
-                  ? "border-l-2 border-l-primary"
-                  : "border-t-2 border-t-primary"
-              }`}
+              className="relative h-full p-8 lg:p-10 rounded-lg bg-white border-2 border-[hsl(var(--primary-hover))] shadow-[var(--shadow-card)] transition-all hover:shadow-[var(--shadow-elegant)] hover:-translate-y-0.5"
             >
               <div className="flex items-center gap-4 mb-6">
                 <div
@@ -116,9 +112,9 @@ export const Audiences = () => (
       </div>
 
       <Reveal delay={240}>
-        <p className="mt-14 text-center font-serif text-xl lg:text-2xl text-on-light max-w-3xl mx-auto leading-snug">
+        <p className="mt-12 text-center font-serif text-xl lg:text-2xl text-on-light mx-auto leading-snug lg:whitespace-nowrap">
           We make compliance simple, so you can focus on what really matters:{" "}
-          <span className="text-primary italic">football.</span>
+          <span className="text-primary italic">Football.</span>
         </p>
       </Reveal>
     </div>

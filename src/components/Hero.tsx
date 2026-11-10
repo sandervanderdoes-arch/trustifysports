@@ -41,8 +41,8 @@ export const Hero = () => (
 
       <Reveal delay={80}>
         <h1 className="font-serif leading-[1.05] hero-headline">
-          <span className="block whitespace-nowrap">Compliance infrastructure</span>
-          <span className="block whitespace-nowrap"><span className="text-foreground">built for</span>{" "}<span className="text-primary italic">professional football</span></span>
+          <span className="block whitespace-nowrap">Compliance Infrastructure</span>
+          <span className="block whitespace-nowrap"><span className="text-foreground">built for</span>{" "}<span className="text-primary italic">Professional Football</span></span>
         </h1>
       </Reveal>
 
@@ -70,21 +70,21 @@ export const Hero = () => (
       </Reveal>
 
       <Reveal delay={320}>
-        <ul className="mt-14 grid grid-cols-2 lg:grid-cols-4 gap-3 max-w-4xl">
+        <ul className="mt-14 grid grid-cols-2 lg:grid-cols-4 gap-3 max-w-5xl">
           {pillars.map((p) => (
             <li
               key={p.label}
               className="flex items-center gap-3 rounded-lg border border-border bg-card/40 backdrop-blur-sm px-4 py-3 text-sm text-foreground/90 transition-colors hover:border-primary/50"
             >
               <p.icon className="h-4 w-4 shrink-0 text-primary" aria-hidden />
-              <span>{p.label}</span>
+              <span className="sm:whitespace-nowrap">{p.label}</span>
             </li>
           ))}
         </ul>
       </Reveal>
 
       <Reveal delay={400}>
-        <div className="mt-10 pt-8 border-t border-border/60 max-w-4xl flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+        <div className="mt-10 pt-8 border-t border-border/60 max-w-5xl flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
           <p className="text-sm text-muted-foreground">
             Developed with clubs and agents, for the football industry. <span className="text-foreground/90">Official partner of Pro Agent, the industry association for player agents.</span>
           </p>

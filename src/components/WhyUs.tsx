@@ -35,7 +35,7 @@ const reasons = [
 ];
 
 export const WhyUs = () => (
-  <section className="on-navy py-24 lg:py-32 bg-surface-deep relative">
+  <section className="on-navy py-16 lg:py-20 bg-surface-deep relative">
     <div className="absolute inset-0 bg-grid opacity-30" aria-hidden />
     <div className="container-tight relative">
       <Reveal className="max-w-5xl mx-auto text-center">
@@ -45,7 +45,7 @@ export const WhyUs = () => (
         </h2>
       </Reveal>
 
-      <div className="mt-16 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
         {reasons.map((r, i) => (
           <Reveal key={r.title} delay={(i % 3) * 100}>
             <article className="group h-full p-7 rounded-lg border border-border bg-card/50 transition-all duration-300 hover:bg-card/80 hover:border-primary/40 hover:-translate-y-1">

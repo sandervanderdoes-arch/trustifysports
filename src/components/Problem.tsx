@@ -20,17 +20,17 @@ const items = [
 ];
 
 export const Problem = () => (
-  <section id="about" className="on-navy py-24 lg:py-32 bg-surface-teal relative">
+  <section id="about" className="on-navy py-16 lg:py-20 bg-surface-teal relative">
     <div className="absolute inset-0 bg-grid opacity-30" aria-hidden />
     <div className="container-tight relative">
       <Reveal className="max-w-5xl mx-auto text-center">
         <div className="gold-rule mb-6 mx-auto" />
         <h2 className="text-3xl lg:text-5xl leading-tight">
-          The regulatory challenge facing football
+          The Regulatory challenge facing Football
         </h2>
       </Reveal>
 
-      <div className="mt-16 grid gap-6 md:grid-cols-3">
+      <div className="mt-12 grid gap-6 md:grid-cols-3">
         {items.map((it, i) => (
           <Reveal key={it.title} delay={i * 100}>
             <article className="h-full p-8 rounded-lg border border-border bg-card/60 backdrop-blur-sm transition-all duration-300 hover:border-primary/40 hover:-translate-y-1">

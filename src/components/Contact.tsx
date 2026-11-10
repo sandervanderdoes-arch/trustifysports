@@ -68,7 +68,7 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 lg:py-32 bg-surface-light text-on-light">
+    <section id="contact" className="py-16 lg:py-20 bg-surface-light text-on-light">
       <div className="container-narrow">
         <Reveal className="text-center">
           <div className="gold-rule mx-auto mb-6" />

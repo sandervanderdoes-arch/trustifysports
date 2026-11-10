@@ -35,7 +35,7 @@ const milestones = [
 ];
 
 export const Timeline = () => (
-  <section id="timeline" className="on-navy py-24 lg:py-32 bg-surface-deep relative">
+  <section id="timeline" className="on-navy py-16 lg:py-20 bg-surface-deep relative">
     <div className="absolute inset-0 bg-grid opacity-30" aria-hidden />
     <div className="container-tight relative">
       <Reveal className="max-w-5xl mx-auto text-center">
@@ -48,7 +48,7 @@ export const Timeline = () => (
         </p>
       </Reveal>
 
-      <div className="mt-16 relative">
+      <div className="mt-12 relative">
         <div
           className="hidden lg:block absolute top-8 left-0 right-0 h-px"
           style={{

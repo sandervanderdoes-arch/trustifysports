@@ -20,7 +20,7 @@ const features = [
 ];
 
 export const Solution = () => (
-  <section id="how" className="py-24 lg:py-32 bg-surface-muted text-on-light">
+  <section id="how" className="py-16 lg:py-20 bg-surface-muted text-on-light">
     <div className="container-tight">
       <Reveal className="max-w-5xl mx-auto text-center">
         <div className="gold-rule mb-6 mx-auto" />
@@ -34,7 +34,7 @@ export const Solution = () => (
         </p>
       </Reveal>
 
-      <div className="mt-16 grid gap-px md:grid-cols-3 bg-[hsl(var(--on-light-border))] border border-[hsl(var(--on-light-border))] rounded-lg overflow-hidden">
+      <div className="mt-12 grid gap-px md:grid-cols-3 bg-[hsl(var(--on-light-border))] border border-[hsl(var(--on-light-border))] rounded-lg overflow-hidden">
         {features.map((f, i) => (
           <Reveal key={f.title} delay={i * 100}>
             <article className="group h-full p-8 lg:p-10 bg-surface-light transition-colors duration-300 hover:bg-white">
@@ -51,7 +51,7 @@ export const Solution = () => (
       <Reveal delay={200}>
         <p className="mt-12 text-center font-serif text-xl lg:text-2xl text-on-light leading-snug">
           Not just a software vendor.{" "}
-          <span className="text-primary italic">A long-term compliance partner for football.</span>
+          <span className="text-primary italic">A long-term compliance partner for Football.</span>
         </p>
       </Reveal>
     </div>

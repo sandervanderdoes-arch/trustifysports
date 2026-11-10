@@ -10,7 +10,7 @@ const benefits = [
 ];
 
 export const FoundingPartner = () => (
-  <section id="founding-partner" className="on-navy py-24 lg:py-28 bg-surface-teal relative">
+  <section id="founding-partner" className="on-navy py-16 lg:py-20 bg-surface-teal relative">
     <div className="absolute inset-0 bg-grid opacity-30" aria-hidden />
     <div className="container-tight relative">
       <Reveal className="max-w-5xl mx-auto text-center">

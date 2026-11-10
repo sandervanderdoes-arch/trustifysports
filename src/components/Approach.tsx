@@ -53,13 +53,13 @@ const GroupLabel = ({ icon: Icon, children }: { icon: typeof UserCheck; children
 );
 
 export const Approach = () => (
-  <section className="py-24 lg:py-32 bg-surface-muted relative overflow-hidden">
+  <section className="py-16 lg:py-20 bg-surface-muted relative overflow-hidden">
     <div className="absolute inset-0 bg-grid opacity-40" aria-hidden />
     <div className="container-tight relative">
       <Reveal className="max-w-5xl mx-auto text-center">
         <div className="gold-rule mx-auto mb-6" />
         <h2 className="text-3xl lg:text-5xl leading-tight max-w-5xl mx-auto">
-          Built with the industry. <span className="text-primary italic whitespace-nowrap">For&nbsp;the&nbsp;industry.</span>
+          Built with the Industry. <span className="text-primary italic whitespace-nowrap">For&nbsp;the&nbsp;Industry.</span>
         </h2>
       </Reveal>
 
@@ -70,7 +70,7 @@ export const Approach = () => (
         </p>
       </Reveal>
 
-      <div className="mt-16">
+      <div className="mt-12">
         <Reveal>
           <GroupLabel icon={UserCheck}>Our experts guide you</GroupLabel>
         </Reveal>
@@ -96,7 +96,7 @@ export const Approach = () => (
         </div>
       </div>
 
-      <div className="mt-20">
+      <div className="mt-14">
         <Reveal>
           <GroupLabel icon={LayoutDashboard}>Our platform runs it</GroupLabel>
         </Reveal>

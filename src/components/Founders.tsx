@@ -26,15 +26,15 @@ const founders = [
 ];
 
 export const Founders = () => (
-  <section id="founders" className="py-24 lg:py-32 bg-surface-muted text-on-light">
+  <section id="founders" className="py-16 lg:py-20 bg-surface-muted text-on-light">
     <div className="container-tight">
       <Reveal className="max-w-5xl mx-auto text-center">
         <div className="gold-rule mb-6 mx-auto" />
-        <h2 className="text-3xl lg:text-5xl leading-tight text-on-light">The team</h2>
+        <h2 className="text-3xl lg:text-5xl leading-tight text-on-light">The Team</h2>
         <p className="mt-6 text-lg text-on-light-muted font-light">Dealmaking, compliance and technology.</p>
       </Reveal>
 
-      <div className="mt-16 grid gap-8 md:grid-cols-3 max-w-6xl mx-auto">
+      <div className="mt-12 grid gap-8 md:grid-cols-3 max-w-6xl mx-auto">
         {founders.map((f, i) => (
           <Reveal key={f.name} delay={i * 120}>
             <article className="bg-surface-light rounded-lg p-8 lg:p-10 border border-[hsl(var(--on-light-border))] h-full flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-elegant)]">
