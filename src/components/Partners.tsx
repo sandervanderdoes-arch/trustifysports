@@ -16,7 +16,10 @@ export const Partners = () => (
               <div className="flex flex-col leading-tight">
                 <span className="font-serif text-lg text-foreground">Pro Agent</span>
                 <span className="text-[10px] uppercase tracking-widest text-muted-foreground">
-                  Official Partner
+                  Official partner
+                </span>
+                <span className="mt-1 text-xs text-muted-foreground">
+                  Industry association for player agents
                 </span>
               </div>
             </div>

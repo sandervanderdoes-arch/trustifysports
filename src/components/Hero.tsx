@@ -86,7 +86,7 @@ export const Hero = () => (
       <Reveal delay={400}>
         <div className="mt-10 pt-8 border-t border-border/60 max-w-4xl flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
           <p className="text-sm text-muted-foreground">
-            Developed with clubs and agents, for the football industry. <span className="text-foreground/90">Official partner of Pro Agent.</span>
+            Developed with clubs and agents, for the football industry. <span className="text-foreground/90">Official partner of Pro Agent, the industry association for player agents.</span>
           </p>
           <p className="text-sm text-muted-foreground whitespace-nowrap">
             <span className="font-serif text-xl text-foreground tabular-nums">{daysToGo().toLocaleString("en-GB")}</span> days until 10 July 2029

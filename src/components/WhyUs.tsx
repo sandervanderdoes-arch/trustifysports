@@ -4,28 +4,28 @@ import { Reveal } from "./Reveal";
 const reasons = [
   {
     icon: Scale,
-    title: "The Rules Are Written",
-    body: "The AMLR has been law since June 2024. In October 2026 AMLA sent its final draft due-diligence standards to the European Commission, after consulting on how supervisors will rate clubs and agents. A compliance programme takes most organisations 18 to 24 months to build.",
+    title: "The rules are written",
+    body: "The AMLR has been law since June 2024. In October 2026, AMLA sent its final draft standards on customer due diligence to the European Commission, and it has consulted on how supervisors will rate clubs and agents. Building a compliance programme takes most organisations 18 to 24 months.",
   },
   {
     icon: Goal,
-    title: "Built for Football Deals",
-    body: "Transfers, loans, sell-ons, add-ons and agent fees, modelled as football deals really work, with every fee tested against comparable deals.",
+    title: "Built for football deals",
+    body: "Transfers, loans, sell-ons, add-ons and agent fees are modelled the way football deals really work, and every fee is tested against comparable deals.",
   },
   {
     icon: Sparkles,
-    title: "Simple Enough for Every Club",
+    title: "Simple enough for every club and agent",
     body: "Designed to be run by your own people, without building a compliance department.",
   },
   {
     icon: Handshake,
-    title: "Partnership-First Model",
-    body: "We grow with our clients. Our business model is built on long-term relationships, not one-off engagements.",
+    title: "Partnership-first model",
+    body: "We grow with our clients: our business model is built on long-term relationships, not one-off engagements.",
   },
   {
     icon: Award,
-    title: "Official Partner of Pro Agent",
-    body: "Trustify Sports is an official partner of Pro Agent, at the heart of the professional football ecosystem.",
+    title: "Official partner of Pro Agent",
+    body: "Trustify Sports is an official partner of Pro Agent, the industry association for football player agents.",
   },
   {
     icon: Globe2,
