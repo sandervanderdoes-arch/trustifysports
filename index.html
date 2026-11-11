@@ -2,64 +2,68 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/favicon-ts.png?v=3" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trustify Sports | AML compliance infrastructure for professional football</title>
-    <meta name="description" content="From 10 July 2029, professional football clubs and football agents are obliged entities under the EU Anti-Money Laundering Regulation. Trustify Sports is the compliance infrastructure built for it." />
+    <link rel="icon" type="image/png" href="/favicon-ts.png?v=3" />
+    <link rel="apple-touch-icon" href="/logo-512.png" />
+    <meta name="theme-color" content="#1F2747" />
     <meta name="author" content="Trustify Sports" />
 
-    <meta property="og:title" content="Trustify Sports | AML compliance infrastructure for professional football" />
-    <meta property="og:description" content="From 10 July 2029, professional football clubs and football agents are obliged entities under the EU Anti-Money Laundering Regulation. Trustify Sports is the compliance infrastructure built for it." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://trustifysports.com/" />
+    <!-- Page-specific tags (title, description, canonical, og:*, JSON-LD) are added per
+         route by src/components/Seo.tsx and baked into each page by scripts/prerender.mjs. -->
+    <meta property="og:site_name" content="Trustify Sports" />
+    <meta property="og:locale" content="en_GB" />
     <meta property="og:image" content="https://trustifysports.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Trustify Sports" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="https://trustifysports.com/og-image.png" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"Organization","name":"Trustify Sports","url":"https://trustifysports.com/","logo":"https://trustifysports.com/favicon-ts.png","email":"sander@trustifysports.com","description":"Compliance infrastructure for professional football clubs and football agents under the EU Anti-Money Laundering Regulation.","sameAs":["https://www.linkedin.com/company/trustify-sports/"]}
-    </script>
-    <!--
-      The <main class="seo-fallback"> block in #root is a text copy of the page for
-      search engines and AI assistants. Keep it in the HTML but visually hidden, so
-      visitors never see it flash before the app loads. Without JavaScript it is shown.
-    -->
-    <style>
-      .seo-fallback { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
-      /* Until the app replaces the block, paint the hero's navy instead of a white screen. */
-      body:has(.seo-fallback) { background-color: hsl(228 39% 14%); }
-    </style>
+    <!-- Inter, loaded without blocking the first paint. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'" />
     <noscript>
-      <style>
-        .seo-fallback { position: static; width: auto; height: auto; margin: 0; padding: 1.5rem; overflow: visible; clip: auto; white-space: normal; }
-        body:has(.seo-fallback) { background-color: #fff; }
-      </style>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+      <!-- Without JavaScript the scroll-reveal never runs, so show the content straight away. -->
+      <style>.reveal { opacity: 1 !important; transform: none !important; }</style>
     </noscript>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://trustifysports.com/#organization",
+          "name": "Trustify Sports",
+          "url": "https://trustifysports.com/",
+          "logo": "https://trustifysports.com/logo-512.png",
+          "image": "https://trustifysports.com/og-image.png",
+          "email": "sander@trustifysports.com",
+          "description": "AML and KYC compliance for professional football clubs and football agents under the EU Anti-Money Laundering Regulation (Regulation (EU) 2024/1624): a platform built for football, compliance experts and ongoing support.",
+          "slogan": "Building the compliance standard for European Football",
+          "areaServed": "Europe",
+          "knowsAbout": ["Anti-money laundering", "EU Anti-Money Laundering Regulation (AMLR)", "Know your customer (KYC)", "Customer due diligence", "Football clubs", "Football agents"],
+          "contactPoint": { "@type": "ContactPoint", "contactType": "sales", "email": "sander@trustifysports.com", "availableLanguage": ["English"] },
+          "sameAs": ["https://www.linkedin.com/company/trustify-sports/"]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://trustifysports.com/#website",
+          "name": "Trustify Sports",
+          "url": "https://trustifysports.com/",
+          "inLanguage": "en",
+          "publisher": { "@id": "https://trustifysports.com/#organization" }
+        }
+      ]
+    }
+    </script>
   </head>
 
   <body>
-    <div id="root">
-      <main class="seo-fallback">
-        <h1>Compliance Infrastructure built for Professional Football</h1>
-        <p>The AML rules are published. Preparation starts now. From 10 July 2029, professional football clubs and football agents are obliged entities under the EU Anti-Money Laundering Regulation: they must know who they deal with, monitor the money that moves, and prove both to a supervisor. Trustify Sports is building the system to run these duties, designed for football.</p>
-        <p>One partner for AML compliance: a platform built for football, compliance experts who guide your implementation, ongoing support, and a connected ecosystem of clubs and agents. Developed with clubs and agents, for the football industry. Official partner of Pro Agent, the industry association for football player agents.</p>
-        <h2>The Regulatory challenge facing Football</h2>
-        <p>Regulation (EU) 2024/1624 names professional football clubs and football agents as obliged entities. Clubs are obliged for transactions with investors, with sponsors and advertisers, with agents and other intermediaries, and in player transfers. Every football agent is an obliged entity regardless of size. Fines for serious breaches can reach €1 million or more.</p>
-        <h2>What Trustify Sports does</h2>
-        <p>Regulatory intelligence, compliance workflows and ongoing support: not just a software vendor, but a long-term compliance partner for Football.</p>
-        <h2>Built with the Industry. For the Industry.</h2>
-        <p>Our experts guide you: we assess your compliance position, write your policies and procedures, translate complex rules into workable processes, and stay alongside you after go-live. Our platform runs it: Verify who you deal with before money moves, Monitor every regulated transaction, and keep the Evidence your supervisor asks for.</p>
-        <h2>Our ambition: building the compliance standard for European Football</h2>
-        <p>A connected ecosystem in which clubs and agents share knowledge, make compliance on transactions faster and easier to audit, reduce duplicate work, and keep compliance simple. Every client's data stays independent and confidential.</p>
-        <h2>The road to 10 July 2029</h2>
-        <p>2027: the AMLR applies to banks and other financial firms. 2028: design and test. January 2029: live test run. 10 July 2029: obligations apply to clubs and agents.</p>
-        <h2>Become a founding partner</h2>
-        <p>We make compliance simple, so clubs and agents can focus on what really matters: Football. Contact: <a href="mailto:sander@trustifysports.com">sander@trustifysports.com</a>. <a href="/privacy">Privacy notice</a></p>
-      </main>
-    </div>
+    <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

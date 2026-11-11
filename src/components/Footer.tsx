@@ -1,13 +1,23 @@
+import { useEffect, useState } from "react";
 import { Linkedin, Mail } from "lucide-react";
 import { Logo } from "./Logo";
+import { GUIDES } from "@/guides";
 
 const links = [
-  { href: "#about", label: "About" },
-  { href: "#how", label: "How we help" },
-  { href: "#vision", label: "Vision" },
-  { href: "#founders", label: "Team" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#about", label: "About" },
+  { href: "/#how", label: "How we help" },
+  { href: "/#vision", label: "Vision" },
+  { href: "/#founders", label: "Team" },
+  { href: "/#contact", label: "Contact" },
 ];
+
+// Prerendered at build time, so the year is filled in after load (the first browser render
+// must match the prerendered HTML).
+const Year = () => {
+  const [year, setYear] = useState<number | null>(null);
+  useEffect(() => setYear(new Date().getFullYear()), []);
+  return <span className="inline-block min-w-[4ch]">{year}</span>;
+};
 
 export const Footer = () => (
   <footer className="on-navy bg-surface-deep border-t border-border py-14">
@@ -48,8 +58,17 @@ export const Footer = () => (
         </div>
       </div>
 
-      <div className="mt-10 pt-6 border-t border-border/60 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between text-xs text-muted-foreground">
-        <p>© {new Date().getFullYear()} Trustify Sports. All rights reserved.</p>
+      <nav aria-label="Guides" className="mt-10 flex flex-wrap gap-x-6 gap-y-2 text-sm">
+        <span className="text-xs uppercase tracking-[0.2em] text-primary self-center">Guides</span>
+        {GUIDES.map((g) => (
+          <a key={g.path} href={g.path} className="text-muted-foreground hover:text-foreground transition-colors">
+            {g.short}
+          </a>
+        ))}
+      </nav>
+
+      <div className="mt-6 pt-6 border-t border-border/60 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between text-xs text-muted-foreground">
+        <p>© <Year /> Trustify Sports. All rights reserved.</p>
         <p className="opacity-80 max-w-xl sm:text-right">Trustify Sports supports compliance but does not provide legal advice. Obligations under Regulation (EU) 2024/1624 remain with each obliged entity.</p>
         <a href="/privacy" className="hover:text-foreground transition-colors">Privacy notice</a>
       </div>

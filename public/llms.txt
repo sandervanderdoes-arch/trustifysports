@@ -1,0 +1,25 @@
+# Trustify Sports
+
+> AML and KYC compliance for professional football clubs and football agents under the EU Anti-Money Laundering Regulation (AMLR), Regulation (EU) 2024/1624: a compliance platform built for football, compliance experts who guide implementation, and ongoing support.
+
+Key facts:
+- Professional football clubs and football agents are obliged entities under the AMLR from 10 July 2029.
+- Clubs are obliged for four transaction types only: with investors; with sponsors and advertisers; with football agents and other intermediaries; and player transfers.
+- Every football agent is an obliged entity, regardless of size, with no exemption.
+- Football associations and leagues are not obliged entities.
+- Clubs and agents are supervised by national AML supervisors. AMLA, the EU Anti-Money Laundering Authority, sets technical standards and coordinates supervision.
+- Trustify Sports never files suspicious-transaction reports on a client's behalf; the club or agent files with its FIU.
+- Trustify Sports supports compliance but does not provide legal advice.
+
+## Pages
+
+- [Home](https://trustifysports.com/): what Trustify Sports does, for clubs and agents
+- [The EU AML Regulation and football: the 2029 guide](https://trustifysports.com/amlr-football-guide): scope, duties, supervision, timeline and how to prepare
+- [AML and KYC compliance for football clubs](https://trustifysports.com/aml-compliance-football-clubs): the four covered transaction types and KYC per counterparty
+- [AML compliance for football agents](https://trustifysports.com/aml-compliance-football-agents): what is covered and how agencies can prepare
+- [Privacy notice](https://trustifysports.com/privacy)
+
+## Contact
+
+- sander@trustifysports.com
+- https://www.linkedin.com/company/trustify-sports/

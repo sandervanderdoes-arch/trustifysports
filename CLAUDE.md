@@ -1,8 +1,9 @@
 # Trustify Sports website (trustifysports.com)
 
 Marketing site for Trustify Sports: compliance infrastructure for professional football
-clubs and football agents under the EU Anti-Money Laundering Regulation. One page plus
-/privacy. React + Vite + TypeScript + Tailwind (shadcn/ui components in `src/components/ui`).
+clubs and football agents under the EU Anti-Money Laundering Regulation. A homepage, three
+guide pages and /privacy. React + Vite + TypeScript + Tailwind (shadcn/ui components in
+`src/components/ui`).
 
 ## How we work
 
@@ -12,7 +13,8 @@ minutes.
 
 Before every push to `main`:
 1. `npm ci` (if needed), `npm test`, `npx eslint <changed files>`, `npm run build`.
-2. Open the changed page in a browser (`npx vite preview --host 127.0.0.1`) and check
+2. Open the changed page of the built site in a browser (served so `/route` loads
+   `route.html`, see Layout) and check
    desktop (1280px) and phone (390px) widths, with no sideways scrolling.
 3. Re-read the diff. Then push and tell Sander what changed, in plain words.
 
@@ -21,16 +23,32 @@ Supabase secrets only.
 
 ## Layout
 
-- `src/pages/Index.tsx`: section order. Sections are in `src/components/` (Hero, Problem,
-  Solution, Audiences, Approach, Vision, Founders, WhyUs, Timeline, Partners, FoundingPartner,
-  Contact, Footer). `src/pages/Privacy.tsx` is the privacy notice.
-- `src/components/Seo.tsx`: per-page title, description and canonical URL (base
-  `https://trustifysports.com`). `index.html` holds the Organization structured data and a
-  visually hidden text copy of the page (`.seo-fallback`) for search engines and AI
-  assistants. Keep that copy in step with the page copy.
-- `public/sitemap.xml`, `public/robots.txt`.
-- `scripts/spa-pages.mjs`: after the build, writes `dist/privacy/index.html` and
-  `dist/404.html` (GitHub Pages has no rewrites). Add new routes there and in the sitemap.
+- `src/routes.tsx`: the one list of pages. The router, the prerender and the sitemap all
+  read it.
+- `src/pages/Index.tsx`: homepage section order. Sections are in `src/components/` (Hero,
+  Problem, Solution, Audiences, Approach, Vision, Founders, WhyUs, Timeline, Partners,
+  FoundingPartner, Contact, Footer). `src/pages/Privacy.tsx` is the privacy notice.
+- Guide pages (for search): `src/pages/AmlrFootballGuide.tsx` (/amlr-football-guide),
+  `AmlFootballClubs.tsx` (/aml-compliance-football-clubs) and `AmlFootballAgents.tsx`
+  (/aml-compliance-football-agents), built on `src/components/GuideLayout.tsx`. Each has an
+  FAQ whose text also feeds the FAQPage structured data. When a guide changes, update its
+  `MODIFIED` date and "Last updated" line. `src/guides.ts` lists them for internal links.
+- `src/components/Seo.tsx`: per-page title, description, canonical URL (base
+  `https://trustifysports.com`, no trailing slash), Open Graph and JSON-LD helpers
+  (`breadcrumb`, `faqPage`, `article`). `index.html` holds the sitewide Organization and
+  WebSite structured data.
+- `scripts/prerender.mjs`: runs after `vite build`. Renders every route to complete static
+  HTML (`dist/<route>.html`, so GitHub Pages serves `/route` with no redirect), writes
+  `dist/404.html` (noindex) and generates `dist/sitemap.xml`. The build fails if a page
+  breaks or has no `<h1>`. The browser then hydrates the prerendered HTML, so anything that
+  depends on today's date must be filled in after load, with the first render matching the
+  build (see `DaysToGo` in Hero.tsx and `Year` in Footer.tsx).
+- To add a page: create it in `src/pages/` with an `<h1>` and `<Seo>`, add it to
+  `src/routes.tsx`, and link to it from at least one existing page.
+- `public/robots.txt`, `public/llms.txt` (summary for AI assistants; keep it in step with
+  the copy).
+- Check pages locally with `npm run build` and a static server that serves `/route` from
+  `route.html` (as GitHub Pages does); `npx vite preview` does not.
 
 ## Contact form
 

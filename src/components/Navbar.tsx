@@ -4,10 +4,11 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
 const links = [
-  { href: "#about", label: "About" },
-  { href: "#how", label: "How we help" },
-  { href: "#vision", label: "Vision" },
-  { href: "#founders", label: "Team" },
+  { href: "/#about", label: "About" },
+  { href: "/#how", label: "How we help" },
+  { href: "/#vision", label: "Vision" },
+  { href: "/#founders", label: "Team" },
+  { href: "/amlr-football-guide", label: "AMLR guide" },
 ];
 
 export const Navbar = () => {
@@ -47,7 +48,7 @@ export const Navbar = () => {
             </a>
           ))}
           <Button asChild variant={scrolled ? "gold" : "onDark"} size="sm">
-            <a href="#contact">Get in touch</a>
+            <a href="/#contact">Get in touch</a>
           </Button>
         </div>
 
@@ -74,7 +75,7 @@ export const Navbar = () => {
               </a>
             ))}
             <Button asChild variant="gold" size="sm" className="self-start">
-              <a href="#contact" onClick={() => setOpen(false)}>Get in touch</a>
+              <a href="/#contact" onClick={() => setOpen(false)}>Get in touch</a>
             </Button>
           </div>
         </div>

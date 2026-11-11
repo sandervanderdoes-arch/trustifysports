@@ -1,6 +1,6 @@
+import { useEffect, useState } from "react";
 import { ArrowRight, LayoutDashboard, UserCheck, LifeBuoy, Network } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Reveal } from "./Reveal";
 
 // The four things a club or agent gets from us, shown as one row so it is clear at a glance
 // that Trustify Sports is more than software.
@@ -13,6 +13,18 @@ const pillars = [
 
 const OBLIGATIONS_APPLY = Date.UTC(2029, 6, 10);
 const daysToGo = () => Math.max(0, Math.ceil((OBLIGATIONS_APPLY - Date.now()) / 86_400_000));
+
+// The page is prerendered at build time. The count is filled in after load so it is always
+// today's number (the first browser render must match the prerendered HTML).
+const DaysToGo = () => {
+  const [days, setDays] = useState<number | null>(null);
+  useEffect(() => setDays(daysToGo()), []);
+  return (
+    <span className="inline-block min-w-[3ch] text-right font-serif text-xl text-foreground tabular-nums">
+      {days?.toLocaleString("en-GB")}
+    </span>
+  );
+};
 
 export const Hero = () => (
   <section id="top" className="on-navy relative pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden bg-hero">
@@ -29,7 +41,7 @@ export const Hero = () => (
     />
 
     <div className="container-tight relative">
-      <Reveal>
+      <div>
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border bg-secondary/50 text-xs uppercase tracking-widest text-muted-foreground mb-8">
           <span className="relative flex h-1.5 w-1.5">
             <span className="absolute inline-flex h-full w-full rounded-full bg-primary opacity-75 motion-safe:animate-ping" />
@@ -37,25 +49,25 @@ export const Hero = () => (
           </span>
           The AML rules are published. Preparation starts now.
         </div>
-      </Reveal>
+      </div>
 
-      <Reveal delay={80}>
+      <div>
         <h1 className="font-serif leading-[1.05] hero-headline">
           <span className="block whitespace-nowrap">Compliance Infrastructure</span>
           <span className="block whitespace-nowrap"><span className="text-foreground">built for</span>{" "}<span className="text-primary italic">Professional Football</span></span>
         </h1>
-      </Reveal>
+      </div>
 
-      <Reveal delay={160}>
+      <div>
         <p className="mt-6 text-lg lg:text-xl text-muted-foreground max-w-3xl font-light leading-relaxed">
           From 10 July 2029, professional football clubs and football agents are obliged entities under
           the EU Anti-Money Laundering Regulation: they must know who they deal with, monitor the money
           that moves, and prove both to a supervisor. Trustify Sports is building the system to run these
           duties, designed for football.
         </p>
-      </Reveal>
+      </div>
 
-      <Reveal delay={240}>
+      <div>
         <div className="mt-10 flex flex-wrap gap-4">
           <Button asChild variant="onDark" size="lg" className="group">
             <a href="#contact">
@@ -67,9 +79,9 @@ export const Hero = () => (
             <a href="#how">How we help</a>
           </Button>
         </div>
-      </Reveal>
+      </div>
 
-      <Reveal delay={320}>
+      <div>
         <ul className="mt-14 grid grid-cols-2 lg:grid-cols-4 gap-3 max-w-5xl">
           {pillars.map((p) => (
             <li
@@ -81,18 +93,18 @@ export const Hero = () => (
             </li>
           ))}
         </ul>
-      </Reveal>
+      </div>
 
-      <Reveal delay={400}>
+      <div>
         <div className="mt-10 pt-8 border-t border-border/60 max-w-5xl flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
           <p className="text-sm text-muted-foreground">
             Developed with clubs and agents, for the football industry. <span className="text-foreground/90">Official partner of Pro Agent, the industry association for player agents.</span>
           </p>
           <p className="text-sm text-muted-foreground whitespace-nowrap">
-            <span className="font-serif text-xl text-foreground tabular-nums">{daysToGo().toLocaleString("en-GB")}</span> days until 10 July 2029
+            <DaysToGo /> days until 10 July 2029
           </p>
         </div>
-      </Reveal>
+      </div>
     </div>
   </section>
 );

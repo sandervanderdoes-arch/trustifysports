@@ -1,4 +1,4 @@
-import { Shield, Handshake, Check, Info } from "lucide-react";
+import { Shield, Handshake, Check, Info, ArrowRight } from "lucide-react";
 import { Reveal } from "./Reveal";
 
 const audiences = [
@@ -16,6 +16,7 @@ const audiences = [
     note:
       "A check applies to every business relationship, and to one-off transactions of €10,000 or more (linked payments count together). Ticketing, merchandise, media rights and ordinary supplier and staff payments are out of scope.",
     accent: "left",
+    link: { href: "/aml-compliance-football-clubs", label: "AML compliance for football clubs" },
   },
   {
     icon: Handshake,
@@ -31,6 +32,7 @@ const audiences = [
     ],
     note: "Covers mandates, commissions, transfers and sub-agent arrangements, whoever pays the fee.",
     accent: "right",
+    link: { href: "/aml-compliance-football-agents", label: "AML compliance for football agents" },
   },
 ];
 
@@ -106,6 +108,11 @@ export const Audiences = () => (
                 <Info className="h-3.5 w-3.5 mt-0.5 shrink-0 text-primary" aria-hidden />
                 <span>{a.note}</span>
               </p>
+
+              <a href={a.link.href} className="group mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:underline">
+                {a.link.label}
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden />
+              </a>
             </article>
           </Reveal>
         ))}

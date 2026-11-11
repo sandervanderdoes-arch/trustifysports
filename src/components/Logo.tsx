@@ -6,7 +6,7 @@ import logoSvg from "@/assets/trustify-logo.svg?raw";
 // per the brand's logo-usage rules (no recolor, use the supplied vector).
 export const Logo = ({ className = "" }: { className?: string }) => (
   <a
-    href="#top"
+    href="/"
     className={`inline-flex items-center group ${className}`}
     aria-label="Trustify Sports home"
   >

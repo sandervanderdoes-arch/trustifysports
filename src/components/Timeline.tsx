@@ -96,7 +96,8 @@ export const Timeline = () => (
             <span className="text-foreground font-medium">Where to start:</span>{" "}
             Most partners begin with a structured readiness assessment. We help
             you scope the work, sequence priorities, and build a defensible plan
-            for your board.
+            for your board. Read our{" "}
+            <a href="/amlr-football-guide" className="text-primary hover:underline">guide to the AMLR for football</a>.
           </p>
           <Button asChild variant="onDark" className="shrink-0">
             <a href="#contact">Start your readiness assessment</a>

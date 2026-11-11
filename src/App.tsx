@@ -1,29 +1,33 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import type { ReactNode } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
-import { Toaster } from "@/components/ui/toaster";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
-import Privacy from "./pages/Privacy.tsx";
+import { siteRoutes } from "./routes.tsx";
 
-const queryClient = new QueryClient();
+// Shared by the browser entry (main.tsx) and the build-time prerender
+// (entry-server.tsx), so the prerendered HTML matches what the browser hydrates.
+export const AppShell = ({ children }: { children: ReactNode }) => (
+  <>
+    <Sonner />
+    {children}
+  </>
+);
+
+export const AppRoutes = () => (
+  <Routes>
+    {siteRoutes.map((r) => (
+      <Route key={r.path} path={r.path} element={r.element} />
+    ))}
+    <Route path="*" element={<NotFound />} />
+  </Routes>
+);
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/privacy" element={<Privacy />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
+  <AppShell>
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
+  </AppShell>
 );
 
 export default App;
