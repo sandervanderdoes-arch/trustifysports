@@ -25,7 +25,7 @@ export const Footer = () => (
       <div className="grid gap-10 lg:grid-cols-[1fr_auto_1fr] items-start">
         <div>
           <Logo />
-          <p className="mt-4 text-sm text-muted-foreground max-w-xs leading-relaxed">
+          <p className="mt-4 text-sm text-muted-foreground leading-relaxed min-[400px]:whitespace-nowrap lg:whitespace-normal min-[1100px]:whitespace-nowrap">
             Building the compliance standard for European football.
           </p>
         </div>
